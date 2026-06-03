@@ -31,7 +31,7 @@ const CustomHeader = ({ date, changeYear }) => {
 function MonthSelector({ selectedDate, onChange, availableMonths = null }) {
   const today = new Date();
 
-  // 미래 월은 항상 비활성화
+  // 미래의 월은 항상 비활성화
   // availableMonths가 로드된 경우 목록에 없는 월도 비활성화
   const filterDate = (date) => {
     if (date > today) return false;
