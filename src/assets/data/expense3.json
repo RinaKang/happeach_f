@@ -1,0 +1,41 @@
+[
+  {
+    "expense_id": 1,
+    "type": 0,
+    "category": 1,
+    "title": "스타벅스 아이스 아메리카노",
+    "amount": 4500,
+    "payment_at": "2026-05-05T08:30:00",
+    "memo": "모닝 커피",
+    "emotion": 1,
+    "evaluation": 75,
+    "is_reevaluated": false
+  },
+  { "expense_id": 2, "type": 0, "category": 2, "title": "버스 요금", "amount": 1250, "payment_at": "2026-05-05T09:00:00", "memo": "출근길", "emotion": 3, "evaluation": 50, "is_reevaluated": false },
+  { "expense_id": 3, "type": 0, "category": 3, "title": "김치찌개 정식", "amount": 9000, "payment_at": "2026-05-05T12:00:00", "memo": "점심 식사", "emotion": 1, "evaluation": 100, "is_reevaluated": false },
+  { "expense_id": 4, "type": 0, "category": 4, "title": "편의점 간식", "amount": 3500, "payment_at": "2026-05-05T15:00:00", "memo": "초콜릿", "emotion": 2, "evaluation": 75, "is_reevaluated": false },
+  { "expense_id": 5, "type": 0, "category": 5, "title": "교보문고 도서구매", "amount": 18000, "payment_at": "2026-05-04T18:30:00", "memo": "자기계발서", "emotion": 1, "evaluation": 100, "is_reevaluated": true },
+  { "expense_id": 6, "type": 0, "category": 6, "title": "넷플릭스 구독료", "amount": 17000, "payment_at": "2026-05-01T00:00:00", "memo": "정기결제", "emotion": 3, "evaluation": 50, "is_reevaluated": false },
+  { "expense_id": 7, "type": 0, "category": 7, "title": "쿠팡 생필품", "amount": 24500, "payment_at": "2026-05-02T14:20:00", "memo": "세제 및 휴지", "emotion": 3, "evaluation": 75, "is_reevaluated": false },
+  { "expense_id": 8, "type": 0, "category": 8, "title": "택시비", "amount": 8200, "payment_at": "2026-05-03T23:10:00", "memo": "야근 귀가", "emotion": 4, "evaluation": 25, "is_reevaluated": false },
+  { "expense_id": 9, "type": 0, "category": 9, "title": "약국", "amount": 5000, "payment_at": "2026-05-04T11:00:00", "memo": "비타민", "emotion": 3, "evaluation": 50, "is_reevaluated": false },
+  { "expense_id": 10, "type": 0, "category": 10, "title": "친구 생일 선물", "amount": 50000, "payment_at": "2026-05-05T19:00:00", "memo": "축하", "emotion": 1, "evaluation": 100, "is_reevaluated": false },
+  {
+    "expense_id": 11,
+    "type": 1,
+    "category": 1,
+    "title": "월급",
+    "amount": 3500000,
+    "payment_at": "2026-05-01T09:00:00",
+    "memo": "4월분 급여",
+    "emotion": 1,
+    "evaluation": 100,
+    "is_reevaluated": false
+  },
+  { "expense_id": 12, "type": 1, "category": 2, "title": "당근마켓 판매", "amount": 20000, "payment_at": "2026-05-02T15:00:00", "memo": "중고의자", "emotion": 2, "evaluation": 75, "is_reevaluated": false },
+  { "expense_id": 13, "type": 1, "category": 3, "title": "주식 배당금", "amount": 12500, "payment_at": "2026-05-03T10:30:00", "memo": "해외주식", "emotion": 2, "evaluation": 50, "is_reevaluated": false },
+  { "expense_id": 14, "type": 1, "category": 4, "title": "블로그 광고 수익", "amount": 45000, "payment_at": "2026-05-04T13:00:00", "memo": "애드센스", "emotion": 1, "evaluation": 75, "is_reevaluated": false },
+  { "expense_id": 15, "type": 1, "category": 5, "title": "친구 축의금 반환", "amount": 100000, "payment_at": "2026-05-05T11:00:00", "memo": "정산", "emotion": 3, "evaluation": 50, "is_reevaluated": false },
+  { "expense_id": 16, "type": 1, "category": 6, "title": "포인트 캐시백", "amount": 3200, "payment_at": "2026-05-05T14:40:00", "memo": "카드사 포인트", "emotion": 2, "evaluation": 25, "is_reevaluated": false },
+  { "expense_id": 17, "type": 1, "category": 7, "title": "기타 입금", "amount": 5000, "payment_at": "2026-05-05T17:00:00", "memo": "기타", "emotion": 5, "evaluation": 0, "is_reevaluated": false }
+]

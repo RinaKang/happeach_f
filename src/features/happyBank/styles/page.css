@@ -1,0 +1,52 @@
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.happyBankPage__back {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  color: var(--Gray-60, #6D7882);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+}
+
+
+.happyBankPage {
+  animation: pageFadeIn 0.25s ease-out;
+  display: flex;
+  width: 100%;
+  padding: 18px 16px 24px;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  background: #f4f5f6;
+  font-family: Pretendard, var(--sans);
+  min-height: 100vh;
+}
+
+.happyBankPageOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}

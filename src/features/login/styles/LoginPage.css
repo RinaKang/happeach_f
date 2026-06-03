@@ -1,0 +1,115 @@
+.login-background {
+    display: flex;
+    min-width: 375px;
+    min-height: 600px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+
+    background-image: url('./loginbg.png');
+    /* background: url(<path-to-image>) lightgray 0px -0.395px / 100% 135.333% no-repeat; */
+}
+
+.login-container {
+    box-sizing: border-box;
+    display: flex;
+    width: 327px;
+    padding: 28px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    border-radius: 24px;
+    border: 1px solid var(--Gray-5, #F4F5F6);
+    background: #FFF;
+    box-shadow: 0 2px 40px 0 var(--Primary-alpha-40, rgba(255, 176, 173, 0.40));
+}
+
+.login-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.login-img {
+    box-sizing: border-box;
+    display: flex;
+    width: 64px;
+    height: 64px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    aspect-ratio: 1/1;
+
+    border-radius: 100px;
+    background: var(--Primary-base, #FFB0AD);
+}
+
+.login-text>.text1 {
+    color: var(--Gray-95, #131416);
+
+    /* Heading/medium */
+    font-family: Pretendard;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    /* 28.6px */
+    letter-spacing: -1px;
+}
+
+.login-text>.text2 {
+    color: var(--Gray-60, #6D7882);
+    text-align: center;
+
+    /* Body Medium/small */
+    font-family: "Noto Sans KR";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    /* 18.2px */
+}
+
+.login-kakao {
+    box-sizing: border-box;
+    display: flex;
+    width: 300px;
+    height: 45px;
+    padding: 0 14px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: var(--kakao-bg, #FEE500);
+}
+
+.login-content {
+    display: flex;
+    height: 23px;
+    padding: 0 82px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.login-content>.icon {
+    width: 18px;
+    height: 18px;
+}
+
+.login-content>.text {
+    white-space: nowrap;
+    color: var(--kakao-text, rgba(0, 0, 0, 0.85));
+    font-family: "Apple SD Gothic Neo";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 22.5px */
+}

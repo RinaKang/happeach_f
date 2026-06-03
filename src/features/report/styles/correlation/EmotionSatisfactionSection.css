@@ -1,0 +1,62 @@
+.emotionSatisfactionSection {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 22px;
+  background: #fff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.emotionSatisfactionSection__insight {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  color: var(--Gray-60, #6D7882);
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 130%;
+  margin: 0;
+}
+
+.emotionSatisfactionSection__insightHighlight {
+  color: var(--Secondary-text, #268097);
+
+  /* Body Bold/small */
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  /* 16.8px */
+}
+
+.emotionSatisfactionSection__title {
+  align-self: flex-start;
+  margin: 0;
+  color: var(--Gray-95, #131416);
+
+  /* Body Medium/medium */
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  /* 20.8px */
+}
+
+.emotionSatisfactionSection__subtitle {
+  align-self: flex-start;
+  margin: 0;
+  color: var(--Gray-60, #6D7882);
+
+  /* Body Medium/xsmall */
+  font-family: "Noto Sans KR";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  /* 14.4px */
+}

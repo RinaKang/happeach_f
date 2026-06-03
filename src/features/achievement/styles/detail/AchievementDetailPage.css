@@ -1,0 +1,62 @@
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.achievementDetailPage {
+  animation: pageFadeIn 0.25s ease-out;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  background-color: #F4F5F6;
+  min-height: 100vh;
+}
+
+/* 회차 요약 카드 */
+.achievementDetailPage__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 22px;
+  background: #fff;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.achievementDetailPage__headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.achievementDetailPage__title {
+  text-align: left;
+  margin: 0;
+  color: var(--Gray-95, #131416);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.achievementDetailPage__date {
+  margin: 0;
+  text-align: left;
+  color: var(--Gray-60, #6D7882);
+  font-family: Pretendard;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.achievementDetailPage__total {
+  margin: 0;
+  color: var(--Gray-95, #131416);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 130%;
+  flex-shrink: 0;
+}

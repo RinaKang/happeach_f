@@ -1,0 +1,1168 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input {
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+.expense-content {
+    min-width: 375px;
+    min-height: 737px;
+}
+
+.expense-content>.header {
+    box-sizing: border-box;
+    display: flex;
+    width: 375px;
+    height: 35px;
+    padding: 0 16px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.expense-content>.header>.back-btn {
+    width: 24px;
+    height: 24px;
+}
+
+.expense-content>.header>.delete {
+    box-sizing: border-box;
+    display: flex;
+    padding: 5px 3px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--Primary-text, #F7645F);
+
+    /* Body Medium/small */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    /* 18.2px */
+}
+
+.expense-content>.contents {
+    display: flex;
+    width: 375px;
+    padding: 18px 16px;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+.contents-f {
+    box-sizing: border-box;
+    display: flex;
+    width: 342px;
+    padding: 0 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+}
+
+.expense-content>.contents label,
+.expense-content>.contents .label {
+    color: var(--Gray-60, #6D7882);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.title-contents {
+    display: flex;
+    width: 326px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.title-icon {
+    display: flex;
+    width: 54px;
+    height: 54px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+
+    border-radius: 100px;
+    background: var(--Category-Light-pink, rgba(255, 176, 173, 0.20));
+}
+
+.title-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    flex: 1 0 0;
+}
+
+.input-content {
+    box-sizing: border-box;
+    display: flex;
+    height: 36px;
+    padding: 6px 4px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+
+    border-width: 0 0 1px;
+    border-bottom: 1px solid var(--Gray-5, #F4F5F6);
+}
+
+.input-content:focus-within {
+    border-bottom: 1px solid var(--Primary-base, #FFB0AD);
+}
+
+.expense-content input {
+    color: var(--Gray-95, #131416);
+
+    /* Body Medium/medium */
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    /* 20.8px */
+}
+
+
+.input-content .clear {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: var(--Gray-10, #E6E8EA);
+    cursor: pointer;
+    visibility: hidden;
+}
+
+/* input에 포커스가 갔을 때, 바로 뒤에 있는 .clear-icon을 보여줌 */
+.input-content:focus .clear,
+input:focus+.clear {
+    visibility: visible;
+}
+
+.contents2 {
+    display: flex;
+    width: 326px;
+    align-items: flex-start;
+    gap: 18px;
+    align-self: stretch;
+}
+
+.type-content {
+    display: flex;
+    width: 100px;
+    height: 56px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    flex-shrink: 0;
+}
+
+.dropdown {
+    width: 100%;
+}
+
+.dropdown>.dropdown-button {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    height: 36px;
+    padding: 8px 4px;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    border-width: 0 0 1px;
+    border-bottom: 1px solid var(--Gray-5, #F4F5F6);
+    background-color: #ffffff;
+    justify-content: space-between;
+
+    color: var(--Gray-95, #131416);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    /* 19.2px */
+}
+
+.dropdown-list {
+    box-sizing: border-box;
+    display: flex;
+    min-width: 112px;
+    padding: 6px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    border-radius: 4px;
+    background: #FFF;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 10000 !important;
+}
+
+.dropdown-list li {
+    box-sizing: border-box;
+    display: flex;
+    height: 32px;
+    padding: 4px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    color: var(--Gray-95, #131416);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    /* 19.2px */
+}
+
+.amount-content {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    flex: 1 0 0;
+}
+
+.payment-at-content {
+    box-sizing: border-box;
+    display: flex;
+    width: 326px;
+    height: 56px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.category-content {
+    box-sizing: border-box;
+    display: flex;
+    width: 326px;
+    height: 56px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.category-down {
+    width: 100%;
+}
+
+.category-button {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    height: 36px;
+    padding: 6px 4px;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    border-width: 0 0 1px;
+    border-bottom: 1px solid var(--Gray-5, #F4F5F6);
+    background-color: #ffffff;
+    justify-content: space-between;
+
+    color: var(--Gray-30, #B1B8BE);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.category-button.selected {
+    color: var(--Gray-95, #131416);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    /* 19.2px */
+}
+
+.category-list {
+    display: flex;
+    padding: 6px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: #FFF;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 10000 !important;
+}
+
+.category-list li {
+    box-sizing: border-box;
+    display: flex;
+    height: 32px;
+    padding: 4px;
+    align-items: center;
+    gap: 6px;
+    align-self: stretch;
+    color: var(--Gray-95, #131416);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.category-list li:first-of-type .category-label {
+    color: var(--Gray-30, #B1B8BE);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    /* 19.2px */
+}
+
+.category-list .category-icon {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    aspect-ratio: 1/1;
+    border-radius: 100px;
+    background: var(--Category-Light-pink, rgba(255, 176, 173, 0.20));
+}
+
+.category-list .category-label {
+    width: 100%;
+    display: flex;
+}
+
+.category-down .chevron {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.memo-content {
+    box-sizing: border-box;
+    display: flex;
+    width: 326px;
+    height: 56px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.devider {
+    width: 314px;
+    height: 1px;
+    background: var(--Gray-5, #F4F5F6);
+}
+
+.expense-section {
+    display: flex;
+    width: 342px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+}
+
+.emotion-section,
+.satisfaction-section {
+    box-sizing: border-box;
+    display: flex;
+    width: 326px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.emotion-label,
+.satisfaction-label {
+    color: var(--Gray-95, #131416);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.emotion-option-container,
+.satisfaction-option-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.emotion-btn,
+.satisfaction-btn {
+    box-sizing: border-box;
+    display: flex;
+    padding: 4px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.emotion-icon,
+.satisfaction-icon {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+}
+
+.emotion-icon.selected,
+.satisfaction-icon.selected {
+    position: relative;
+    background: var(--Primary-surface, rgba(255, 176, 173, 0.20));
+}
+
+.emotion-name,
+.satisfaction-name {
+    color: var(--Gray-60, #6D7882);
+    text-align: center;
+
+    /* Body Medium/small */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    /* 18.2px */
+}
+
+.emotion-name.selected,
+.satisfaction-name.selected {
+    color: var(--Primary-text, #F7645F);
+    text-align: center;
+
+    /* Body Medium/small */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    /* 18.2px */
+}
+
+.expense-section .alert-banner {
+    box-sizing: border-box;
+    display: flex;
+    width: 326px;
+    padding: 12px 8px;
+    align-items: center;
+    gap: 4px;
+    border-radius: 12px;
+    background: var(--Primary-surface, rgba(255, 176, 173, 0.20));
+}
+
+.expense-section .alert-banner>.alert-text {
+    display: flex;
+    padding: 0 4px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+    flex: 1 0 0;
+}
+
+.expense-section .alert-banner>.alert-text>.text1 {
+    color: var(--Primary-text, #F7645F);
+
+    /* Body Medium/xsmall */
+    font-family: "Noto Sans KR";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    /* 14.4px */
+}
+
+.expense-section .alert-banner>.alert-text>.text2 {
+    color: var(--Primary-text, #F7645F);
+
+    /* Body Bold/small */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    /* 16.8px */
+}
+
+
+.devider2 {
+    width: 375px;
+    height: 12px;
+    flex-shrink: 0;
+    background: var(--Gray-5, #F4F5F6);
+}
+
+.contents-fix {
+    box-sizing: border-box;
+    display: flex;
+    width: 343px;
+    padding: 0 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+}
+
+.fix-toggle-row {
+    display: flex;
+    height: 55px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.toggle-row-text {
+    display: flex;
+    min-width: 166.02px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.toggle-row-text>.title {
+    color: var(--Gray-95, #131416);
+    font-family: "Noto Sans KR";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.toggle-row-text>.sub {
+    color: var(--Gray-95, #131416);
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.fix-setting {
+    display: flex;
+    padding: 0 0 22px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+}
+
+.cycle-setting {
+    display: flex;
+    width: 326px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.setting-bar {
+    display: flex;
+    height: 41px;
+    padding: 4px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 8px;
+    background: var(--Gray-5, #F4F5F6);
+}
+
+.setting-bar>.tab {
+    box-sizing: border-box;
+    display: flex;
+    width: 102px;
+    padding: 8px 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 6px;
+    color: var(--Gray-60, #6D7882);
+
+    /* Body semibold/small */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 16.8px */
+    letter-spacing: -0.4px;
+}
+
+.setting-bar>.tab.selected {
+    background: var(--Gray-0, #FFF);
+    color: var(--Gray-95, #131416);
+
+    /* Body semibold/small */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 16.8px */
+    letter-spacing: -0.4px;
+}
+
+.cycle-setting .cycle {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    align-self: stretch;
+    gap: 6px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    place-content: center;
+    place-items: center;
+}
+
+.cycle-setting .cycle-chip {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: var(--Gray-5, #F4F5F6);
+    color: var(--Gray-60, #6D7882);
+
+    /* Body semibold/small */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 16.8px */
+    letter-spacing: -0.4px;
+}
+
+.cycle-chip.selected {
+    background: var(--Primary-base, #FFB0AD);
+    color: var(--Gray-0, #FFF);
+
+    /* Body semibold/small */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 16.8px */
+    letter-spacing: -0.4px;
+}
+
+.start-date,
+.end-date {
+    display: flex;
+    width: 326px;
+    height: 56px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.fix-setting .custom-input {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--Gray-95, #131416);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    /* 19.2px */
+}
+
+.fix-setting .custom-input.none {
+    color: var(--Gray-30, #B1B8BE);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    /* 19.2px */
+}
+
+.submit-btn {
+    box-sizing: border-box;
+    display: flex;
+    width: 326px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 1000px;
+    background: var(--Primary-base, #FFB0AD);
+
+    /* Button 3D */
+    box-shadow: 0 1px 8px 0 var(--Primary-30, #FFB0AD) inset, -1px 2px 2px 0 var(--Primary-0, #FFF) inset, 0 -2px 2px 0 var(--Primary-50, #FF7E79) inset, 0 8px 40px 0 var(--Alpha-Black-10, rgba(0, 0, 0, 0.10));
+
+    color: var(--Gray-0, #FFF);
+    text-align: center;
+
+    /* Body semibold/large */
+    font-family: Pretendard;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 21.6px */
+    letter-spacing: -0.8px;
+}
+
+.submit-btn.disable {
+    background: var(--Gray-5, #F4F5F6);
+    /* Button 3D */
+    box-shadow: 0 1px 8px 0 var(--Primary-30, #F4F5F6) inset, -1px 2px 2px 0 var(--Primary-0, #FFF) inset, 0 -2px 2px 0 var(--Primary-50, #F4F5F6) inset, 0 8px 40px 0 var(--Alpha-Black-10, rgba(0, 0, 0, 0.10));
+
+    color: var(--Gray-60, #6D7882);
+}
+
+.input-content>div {
+    width: 100%;
+}
+
+.input-content .react-datepicker-wrapper {
+    width: 100%;
+}
+
+.input-content .react-datepicker__input-container {
+    width: 100%;
+    display: block;
+}
+
+.payment-at-content .custom-input {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--Gray-95, #131416);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    /* 19.2px */
+}
+
+.payment-at-content .disclosure {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+/* react-datepicker의 ARIA live region 완전히 숨기기 */
+.react-datepicker__aria-live {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    white-space: nowrap !important;
+}
+
+.custom-input {
+    display: flex;
+    height: 24px;
+    align-items: center;
+    color: var(--Gray-95, #131416);
+
+    /* Body Regular/large */
+    font-family: Pretendard;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    /* 23.4px */
+}
+
+.custom-input>.disclosure {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.react-datepicker-popper {
+    z-index: 9999 !important;
+    /* 또는 10000 이상 */
+}
+
+
+.react-datepicker {
+    box-sizing: border-box;
+    display: flex;
+    width: 310px;
+    height: auto !important;
+    padding: 4px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: visible !important;
+
+    background-color: #ffffff !important;
+    border-radius: 12px;
+    /* Button Shadow */
+    box-shadow: 0 8px 40px 0 var(--Alpha-Black-10, rgba(0, 0, 0, 0.10));
+}
+
+.react-datepicker__month-container {
+    height: auto !important;
+    min-height: min-content !important;
+    /* 콘텐츠만큼 늘어나도록 강제 */
+    background-color: white !important;
+}
+
+.react-datepicker__header {
+    box-sizing: border-box;
+    width: 309px;
+    height: 48px;
+    display: flex;
+    padding: 12px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.react-datepicker__header>.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
+    color: var(--Gray-95, #131416);
+    text-align: center;
+
+    /* Body semibold/small */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 16.8px */
+}
+
+.react-datepicker__day-names {
+    display: flex;
+    height: 16.757px;
+    padding: 0 13.405px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+
+    color: var(--Gray-30, #B1B8BE);
+    text-align: center;
+
+    /* Body semibold/xsmall */
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 14.4px */
+}
+
+.react-datepicker__day-name {
+    display: flex;
+    width: 26.811px;
+    height: 15.081px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Screen Reader 전용 텍스트 숨기기 */
+.react-datepicker__sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.react-datepicker__day {
+    color: var(--Gray-95, #131416);
+    text-align: center;
+
+    /* Body Medium/medium */
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    /* 20.8px */
+}
+
+.react-datepicker__day.react-datepicker__day--outside-month {
+    visibility: hidden;
+}
+
+.react-datepicker__day--today {
+    color: var(--Secondary-text, #268097);
+    text-align: center;
+
+    /* Body Medium/medium */
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    /* 20.8px */
+}
+
+.react-datepicker__day--selected {
+    border-radius: 100px;
+    background: var(--Secondary-surface, #EDF6F8);
+
+    color: var(--Secondary-text, #268097);
+    text-align: center;
+
+    /* Body semibold/large */
+    font-family: Pretendard;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 21.6px */
+    letter-spacing: -0.8px;
+}
+
+.react-datepicker__day--disabled {
+    color: var(--Gray-30, #B1B8BE);
+    text-align: center;
+
+    /* Body Medium/medium */
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    /* 20.8px */
+}
+
+.react-datepicker__month {
+    box-sizing: border-box;
+    display: flex;
+    height: auto !important;
+    padding-top: 2.514px;
+    padding-bottom: 5.865px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5.865px;
+    align-self: stretch;
+}
+
+.react-datepicker__week {
+    display: flex;
+    padding: 0 8px;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.react-datepicker__day {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.react-datepicker__calendar-container {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+}
+
+.react-datepicker__children-container {
+    width: 100%;
+}
+
+.react-datepicker .btn-content {
+    display: flex;
+    padding: 12px;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.btn-content .cancle {
+    box-sizing: border-box;
+    display: flex;
+    width: 136px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: var(--Gray-5, #F4F5F6);
+    color: var(--Gray-60, #6D7882);
+    text-align: center;
+
+    /* Body semibold/medium */
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 19.2px */
+    letter-spacing: -0.4px;
+}
+
+.btn-content .confirm {
+    box-sizing: border-box;
+    display: flex;
+    width: 136px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: var(--Primary-base, #FFB0AD);
+    color: var(--Gray-0, #FFF);
+    text-align: center;
+
+    /* Body semibold/medium */
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 19.2px */
+    letter-spacing: -0.4px;
+}
+
+
+
+
+.react-datepicker__month-text {
+    box-sizing: border-box;
+    width: 103px;
+    height: 49px;
+    display: inline-block;
+    padding: 14px 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    justify-self: stretch;
+    margin: 0;
+
+    color: var(--Gray-95, #131416);
+    text-align: center;
+
+    /* Body Medium/medium */
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    /* 20.8px */
+}
+
+.react-datepicker__month-text:not([aria-disabled=true]):hover {
+    border-radius: 4px;
+    background: var(--Secondary-surface, #EDF6F8);
+}
+
+.react-datepicker__month-container .react-datepicker__month-text--selected {
+    box-sizing: border-box;
+    color: var(--Secondary-text, #268097);
+    text-align: center;
+
+    /* Body semibold/medium */
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 19.2px */
+    border-radius: 4px;
+    background: var(--Secondary-surface, #EDF6F8);
+}
+
+.devider {
+    display: flex;
+    width: 286px;
+    height: 1px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 1px;
+    background: var(--Gray-5, #F4F5F6);
+}

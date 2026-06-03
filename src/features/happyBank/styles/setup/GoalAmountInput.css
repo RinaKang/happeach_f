@@ -1,0 +1,117 @@
+.goalAmountInput {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.goalAmountInput__label {
+  color: #6d7882;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.goalAmountInput__wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.goalAmountInput__fieldRow {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.goalAmountInput__field {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  padding: 0;
+  background: transparent;
+  color: #131416;
+  font-family: inherit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  caret-color: #f7645f;
+}
+
+.goalAmountInput__field::placeholder {
+  color: #b1b8be;
+}
+
+.goalAmountInput__unit {
+  color: #b1b8be;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.goalAmountInput__clear {
+  display: inline-flex;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: #e6e8ea;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.goalAmountInput__clear img {
+display: flex;
+width: 24px;
+height: 24px;
+justify-content: center;
+align-items: center;
+}
+
+.goalAmountInput__underline {
+  width: 100%;
+  height: 1px;
+  background: #f4f5f6;
+}
+
+.goalAmountInput__wrapper--focused .goalAmountInput__underline {
+  background: #ffb0ad;
+}
+
+.goalAmountInput__wrapper--error .goalAmountInput__underline {
+  background: #de3412;
+}
+
+.goalAmountInput__message {
+  margin: 0;
+  color: #6d7882;
+  font-family: inherit;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.goalAmountInput__message--error {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #de3412;
+}
+
+.goalAmountInput__message--error img {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}

@@ -1,0 +1,22 @@
+.monthDivider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.monthDivider__line {
+  flex: 1;
+  height: 1px;
+  background: var(--Gray-10, #E6E8EA);
+}
+
+.monthDivider__label {
+  color: var(--Gray-30, #B1B8BE);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+}

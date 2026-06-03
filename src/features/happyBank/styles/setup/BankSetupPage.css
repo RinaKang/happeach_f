@@ -1,0 +1,252 @@
+@keyframes pageSlideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0);    }
+}
+
+.bankSetupPage {
+  animation: pageSlideIn 0.25s ease-out;
+  display: flex;
+  width: 375px;
+  max-width: 100%;
+  padding: 48px 16px;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #fff;
+  font-family: Pretendard, var(--sans);
+}
+
+.bankSetupPage__header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.bankSetupPage__backBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.bankSetupPage__backBtn img {
+  width: 24px;
+  height: 24px;
+}
+
+.bankSetupPage__deleteBtn {
+  border: none;
+  background: transparent;
+  color: #ff7e79;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  cursor: pointer;
+  padding: 0;
+}
+
+.bankSetupPage__profile {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.bankSetupPage__avatar {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #a9dab4;
+}
+
+.bankSetupPage__avatar img {
+  width: 40px;
+  height: 40px;
+}
+
+.bankSetupPage__nameRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.bankSetupPage__nameText {
+  color: #131416;
+  font-family: inherit;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.bankSetupPage__editBtn {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.bankSetupPage__pencil {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.bankSetupPage__nameEditArea {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bankSetupPage__nameInputRow {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid #ffb0ad;
+}
+
+.bankSetupPage__nameInputRow--error {
+  border-bottom-color: #de3412;
+}
+
+.bankSetupPage__nameInput {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  padding: 0;
+  background: transparent;
+  color: #131416;
+  font-family: inherit;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  caret-color: #f7645f;
+}
+
+.bankSetupPage__nameMeta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.bankSetupPage__nameCount {
+  color: #ffb0ad;
+  font-family: inherit;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.bankSetupPage__nameCount--error {
+  color: #de3412;
+}
+
+.bankSetupPage__iconButton {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: #e6e8ea;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.bankSetupPage__iconButton img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.bankSetupPage__nameError {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  color: #de3412;
+  font-family: inherit;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.bankSetupPage__nameError img {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.bankSetupPage__form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
+  box-sizing: border-box;
+}
+
+.bankSetupPage__confirmBtn {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: auto;
+  border: none;
+  border-radius: 1000px;
+  background: #e6e8ea;
+  color: #fff;
+  font-family: inherit;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
+}
+
+.bankSetupPage__confirmBtn--active {
+  background: #ffb0ad;
+  box-shadow:
+    0 1px 8px 0 #ffb0ad inset,
+    -1px 2px 2px 0 #fff inset,
+    0 -2px 2px 0 #ff7e79 inset,
+    0 8px 40px 0 rgba(0, 0, 0, 0.1);
+}
+
+.bankSetupPage__confirmBtn:active {
+  opacity: 0.85;
+}

@@ -1,0 +1,54 @@
+.happyBankNudgeBanner {
+  display: flex;
+  width: 343px;
+  padding: 18px 22px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--Secondary-base, #75C0D1);
+  background: var(--Secondary-surface, #EDF6F8);
+  box-sizing: border-box;
+}
+
+.happyBankNudgeBanner__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.happyBankNudgeBanner__main {
+  margin: 0;
+  text-align: left;
+  color: var(--Secondary-text, #268097);
+
+  /* Body Medium/small */
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  /* 18.2px */
+}
+
+.happyBankNudgeBanner__sub {
+  margin: 0;
+  text-align: left;
+  color: var(--Secondary-text, #268097);
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.happyBankNudgeBanner__strong {
+  color: var(--Secondary-text, #268097);
+
+  /* Body Bold/small */
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}

@@ -1,0 +1,139 @@
+.savingsTypeSelect {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 16px;
+}
+
+.savingsTypeSelect__label {
+  color: var(--Gray-60, #6D7882);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+/* ── trigger button ── */
+.savingsTypeSelect__control {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.savingsTypeSelect__trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 10px 20px 10px 4px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.savingsTypeSelect__triggerLabel {
+  color: var(--Gray-95, #131416);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+  white-space: nowrap;
+}
+
+.savingsTypeSelect__triggerDesc {
+  display: none;
+}
+
+.savingsTypeSelect__chevron {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%) rotate(0deg);
+  z-index: 101;
+  pointer-events: none;
+  display: flex;
+  width: 10.664px;
+  height: 6.35px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.savingsTypeSelect__chevron--open {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.savingsTypeSelect__underline {
+  width: 100%;
+  height: 1px;
+  background: #F4F5F6;
+}
+
+/* ── dropdown panel ── */
+.savingsTypeSelect__dropdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  list-style: none;
+  margin: 0;
+
+  display: flex;
+  min-width: 112px;
+  padding: 4px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  align-self: stretch;
+
+  border-radius: 4px;
+  background: #FFF;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+}
+
+.savingsTypeSelect__option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+.savingsTypeSelect__optionLabel {
+  color: var(--Gray-95, #131416);
+  font-family: Pretendard;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 120%;
+  white-space: nowrap;
+}
+
+.savingsTypeSelect__optionDesc {
+  color: var(--Gray-60, #6D7882);
+  font-family: Pretendard;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.savingsTypeSelect__optionDescIcon {
+  display: flex;
+  width: 14px;
+  height: 14px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: var(--Gray-10, #E6E8EA);
+}

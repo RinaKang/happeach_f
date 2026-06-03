@@ -1,0 +1,18 @@
+[
+    {
+        "expenseId": 1012,
+        "title": "마라탕",
+        "type": "EXPENSE",
+        "category": "FOOD",
+        "amount": 15000,
+        "emotion": "STRESS",
+        "evaluation": 1
+    },
+    {
+        "expenseId": 1013,
+        "title": "용돈",
+        "type": "INCOME",
+        "category": "ALLOWANCE",
+        "amount": 15000
+    }
+]

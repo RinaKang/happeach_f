@@ -1,0 +1,142 @@
+.hashtagInput {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+.hashtagInput__label {
+  color: #6D7882;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.hashtagInput__fieldArea {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hashtagInput__inputRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+/* 확정 태그 + 현재 입력 묶음 */
+.hashtagInput__tagsAndInput {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.hashtagInput__tagText {
+  color: var(--Gray-95, #131416);
+
+  /* Body Medium/medium */
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%; /* 20.8px */
+}
+
+.hashtagInput__inputWrapper {
+  display: inline-flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.hashtagInput__prefix {
+  color: var(--Gray-30, #B1B8BE);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  flex-shrink: 0;
+  transition: color 0.15s;
+}
+
+.hashtagInput__prefix--active {
+  color: #131416;
+}
+
+.hashtagInput__field {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--Gray-30, #B1B8BE);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  caret-color: #FFB0AD;
+  min-width: 40px;
+  flex: 1;
+  transition: color 0.15s;
+}
+
+.hashtagInput__field:not(:placeholder-shown) {
+  color: #131416;
+}
+
+
+.hashtagInput__count {
+  color: #B1B8BE;
+  font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 120%;
+  flex-shrink: 0;
+  transition: color 0.15s;
+}
+
+.hashtagInput__count--current {
+  color: #FFB0AD;
+}
+
+.hashtagInput__deleteBtn {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: var(--Gray-10, #E6E8EA);
+}
+
+.hashtagInput__underline {
+  width: 100%;
+  height: 1px;
+  background: #F4F5F6;
+  transition: background 0.15s;
+}
+
+.hashtagInput__underline--active {
+  background: #FFB0AD;
+}
+
+.hashtagInput__underline--error {
+  background: #FF4D4D;
+}
+
+.hashtagInput__error {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin: 0;
+  color: #FF4D4D;
+  font-family: Pretendard;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 130%;
+}

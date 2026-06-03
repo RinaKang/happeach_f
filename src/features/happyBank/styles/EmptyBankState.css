@@ -1,0 +1,62 @@
+.emptyBankState {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.emptyBankState__depositCard {
+  display: flex;
+  width: 100%;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 14px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.emptyBankState__depositIcon {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #e6e8ea;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.emptyBankState__depositText {
+  color: #6d7882;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.emptyBankState__content {
+  display: flex;
+  min-height: 240px;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.emptyBankState__message {
+color: var(--Gray-30, #B1B8BE);
+
+/* Body Medium/small */
+font-family: Pretendard;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 130%; /* 18.2px */
+}

@@ -1,0 +1,167 @@
+.emotionSpendingSection {
+  display: flex;
+  width: 343px;
+  padding: 18px 22px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  border-radius: 12px;
+  background: #FFF;
+  box-sizing: border-box;
+}
+
+.emotionSpendingSection__title {
+  align-self: flex-start;
+  color: var(--Gray-95, #131416);
+
+  /* Body Medium/small */
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  /* 18.2px */
+}
+
+.emotionSpendingSection__body {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+
+/* 도넛 차트 */
+.emotionDonutChart {
+  position: relative;
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.emotionDonutChart__center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+}
+
+.emotionDonutChart__center p {
+  margin: 0;
+}
+
+.emotionDonutChart__centerEmotion {
+  margin: 0;
+  color: var(--Gray-95, #131416);
+  text-align: center;
+
+  /* Body semibold/medium */
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  /* 19.2px */
+  letter-spacing: -0.4px;
+}
+
+.emotionDonutChart__centerRatio {
+  margin: 0;
+  color: var(--Gray-60, #6D7882);
+  text-align: center;
+
+  /* Body semibold/xsmall */
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  /* 14.4px */
+}
+
+
+.emotionSpendingSection__insight {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  color: var(--Gray-60, #6D7882);
+
+  /* Body Medium/small */
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  /* 18.2px */
+}
+
+
+.emotionSpendingSection__insightHighlight {
+  color: var(--Secondary-text, #268097);
+
+  /* Body Bold/small */
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.emotionLegendList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  height: 100px;
+  width: 100%;
+}
+
+.emotionLegendList__item {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  width: 100%;
+
+}
+
+
+.emotionLegendList__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.emotionLegendList__name {
+  color: var(--Gray-60, #6D7882);
+
+  /* Body Medium/small */
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  /* 18.2px */
+  flex: 1;
+  text-align: left;
+}
+
+.emotionLegendList__ratio {
+  font-family: Pretendard;
+  font-size: 13px;
+  font-weight: 600;
+  color: #131416;
+  flex-shrink: 0;
+  min-width: 36px;
+  text-align: right;
+}

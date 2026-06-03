@@ -1,0 +1,82 @@
+{
+    "count": 7,
+    "items": [
+        {
+            "expenseId": 6,
+            "type": "EXPENSE",
+            "title": "충동 마라탕",
+            "category": "FOOD",
+            "amount": 18000,
+            "emotion": "IMPULSIVE",
+            "evaluation": 4,
+            "paymentAt": "2026-05-13T13:32:06",
+            "reevaluationAt": "2026-05-12T13:32:06"
+        },
+        {
+            "expenseId": 7,
+            "type": "EXPENSE",
+            "title": "야근 택시비",
+            "category": "TRANSPORT",
+            "amount": 12500,
+            "emotion": "STRESS",
+            "evaluation": 3,
+            "paymentAt": "2026-05-14T23:10:00",
+            "reevaluationAt": "2026-05-15T09:00:00"
+        },
+        {
+            "expenseId": 8,
+            "type": "EXPENSE",
+            "title": "홧김에 산 스니커즈",
+            "category": "SHOPPING",
+            "amount": 89000,
+            "emotion": "DEPRESSED",
+            "evaluation": 4,
+            "paymentAt": "2026-05-15T15:20:45",
+            "reevaluationAt": "2026-05-15T18:30:00"
+        },
+        {
+            "expenseId": 9,
+            "type": "EXPENSE",
+            "title": "기분전환 네일아트",
+            "category": "BEAUTY",
+            "amount": 55000,
+            "emotion": "IMPULSE",
+            "evaluation": 4,
+            "paymentAt": "2026-05-15T11:00:00",
+            "reevaluationAt": "2026-05-15T20:00:00"
+        },
+        {
+            "expenseId": 10,
+            "type": "EXPENSE",
+            "title": "스트레스 해소용 영양제",
+            "category": "MEDICAL",
+            "amount": 32000,
+            "emotion": "STRESS",
+            "evaluation": 3,
+            "paymentAt": "2026-05-14T10:15:00",
+            "reevaluationAt": "2026-05-15T11:00:00"
+        },
+        {
+            "expenseId": 11,
+            "type": "EXPENSE",
+            "title": "충동적인 유료 강의 결제",
+            "category": "EDUCATION",
+            "amount": 150000,
+            "emotion": "IMPULSE",
+            "evaluation": 3,
+            "paymentAt": "2026-05-13T21:40:00",
+            "reevaluationAt": "2026-05-14T14:20:00"
+        },
+        {
+            "expenseId": 12,
+            "type": "EXPENSE",
+            "title": "우울해서 간 만화카페",
+            "category": "LEISURE",
+            "amount": 15000,
+            "emotion": "DEPRESSED",
+            "evaluation": 4,
+            "paymentAt": "2026-05-12T19:00:00",
+            "reevaluationAt": "2026-05-13T10:00:00"
+        }
+    ]
+}

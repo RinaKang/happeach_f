@@ -1,0 +1,12 @@
+.Header {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 16px 0 16px;
+}
+
+.logo img {
+    width: 100px;
+    padding: 8px;
+}
