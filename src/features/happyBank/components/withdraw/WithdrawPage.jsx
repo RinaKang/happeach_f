@@ -96,7 +96,7 @@ function WithdrawPage({ onBack, bankInfo, record, onDelete }) {
 
       const link = document.createElement('a');
       const safeDate = String(record.date ?? 'receipt').replace(/[^\w-]+/g, '-');
-      link.download = `lagom-receipt-${safeDate}.png`;
+      link.download = `happeach-receipt-${safeDate}.png`;
       link.href = dataUrl;
       link.click();
     } catch (error) {
@@ -109,9 +109,9 @@ function WithdrawPage({ onBack, bankInfo, record, onDelete }) {
   const renderReceiptContent = () => (
     <>
       <h2 className="withdrawPage__receiptTitle">
-        Lagom&apos;s
+        Happeach&apos;s
         <br />
-        Happiness RECEIPT
+        Happiness Receipt
       </h2>
 
       <p className="withdrawPage__receiptDate">

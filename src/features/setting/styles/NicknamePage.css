@@ -1,0 +1,159 @@
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.nicknamePage {
+  animation: pageFadeIn 0.25s ease-out;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #fff;
+  box-sizing: border-box;
+  font-family: Pretendard, sans-serif;
+}
+
+/* ── 헤더 ────────────────────────────────── */
+.nicknamePage__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 0;
+}
+
+.nicknamePage__backBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nicknamePage__doneBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: Pretendard, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #F7645F;
+  padding: 4px 0;
+}
+
+.nicknamePage__doneBtn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* ── 본문 ────────────────────────────────── */
+.nicknamePage__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 32px 0;
+  gap: 32px;
+}
+
+.nicknamePage__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #FFB0AD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 11px 12px;
+  box-sizing: border-box;
+}
+
+.nicknamePage__avatarIcon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ── 입력 필드 ────────────────────────────────── */
+.nicknamePage__field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nicknamePage__label {
+  display: block;
+  text-align: left;
+  color: var(--Gray-60, #6D7882);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%;
+  padding: 0 0 8px;
+}
+
+.nicknamePage__inputRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nicknamePage__input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: Pretendard, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #B1B8BE;
+  padding: 4px 0;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.nicknamePage__input--focused {
+  color: #131416;
+}
+
+.nicknamePage__clearBtn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #E6E8EA;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nicknamePage__clearBtn svg {
+  width: 19px;
+  height: 19px;
+}
+
+.nicknamePage__clearBtn svg path {
+  fill: #fff;
+}
+
+.nicknamePage__underline {
+  height: 1px;
+  background: #E6E8EA;
+  width: 100%;
+}
+
+.nicknamePage__underline--focused {
+  height: 1.5px;
+  background: #FFB0AD;
+}
