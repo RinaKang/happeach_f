@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { jwtDecode } from 'jwt-decode';
-import { saveNicknameForToken } from '../setting/hooks/useSetting';
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
@@ -23,14 +21,6 @@ const LoginCallbackPage = () => {
 
           if (token) {
             localStorage.setItem('token', token);
-
-            const tokenInfo = jwtDecode(token);
-            const defaultNickname = response.data.nickname
-              ?? response.data.name
-              ?? tokenInfo?.nickname
-              ?? tokenInfo?.name;
-
-            saveNicknameForToken(token, defaultNickname);
             navigate('/');
           } else {
             console.error('로그인 응답에 accessToken이 없습니다.', response.data);
