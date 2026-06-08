@@ -29,7 +29,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: var(--Gray-10, #E6E8EA);
+  background: #FFB0AD;
   flex-shrink: 0;
 }
 

@@ -8,11 +8,11 @@
 .monthDivider__line {
   flex: 1;
   height: 1px;
-  background: var(--Gray-10, #E6E8EA);
+  background: #FFE1E0;
 }
 
 .monthDivider__label {
-  color: var(--Gray-30, #B1B8BE);
+  color: #FFB0AD;
   font-feature-settings: 'liga' off, 'clig' off;
   font-family: Pretendard;
   font-size: 14px;
