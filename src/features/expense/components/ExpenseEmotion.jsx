@@ -55,17 +55,17 @@ const ExpenseEmotion = ({
       if (isReEva) {
         // 재평가
         await axios.patch(`${BASE_URL}/expenses/${id}/reevaluate?evaluation=${submitData.evaluation}`, {})
-        console.log('가계부 저장 재평가', submitData);
+        // console.log('가계부 저장 재평가', submitData);
 
       } else if (isEditMode) {
         // 수정
         await axios.put(`${BASE_URL}/expenses/${id}`, submitData);
-        console.log('가계부 저장 수정', submitData);
+        // console.log('가계부 저장 수정', submitData);
 
       } else {
         // 가계부 작성
         await axios.post('${BASE_URL}/expenses', submitData);
-        console.log('가계부 저장 작성', submitData);
+        // console.log('가계부 저장 작성', submitData);
 
       }
     } catch (error) {
@@ -73,7 +73,7 @@ const ExpenseEmotion = ({
     }
 
     // 그 후에 행복저금으로 이동
-    navigate(`/happyBank`);
+    navigate(`/happybank`);
   };
 
   return (
