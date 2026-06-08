@@ -63,7 +63,7 @@ function SettingPage() {
 
       <div className="settingPage__profile">
         <div className="settingPage__avatar">
-          <Icon />
+          <Icon width={80} height={80} />
         </div>
         <span className="settingPage__nickname">{displayName}</span>
       </div>
