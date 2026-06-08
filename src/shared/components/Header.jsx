@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import Settings from '../../assets/icons/common/Settings';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logoClean.svg';
 import "../styles/Header.css";
 
 const Header = () => {
