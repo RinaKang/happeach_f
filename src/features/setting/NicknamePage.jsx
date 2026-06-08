@@ -68,7 +68,7 @@ function NicknamePage() {
 
       <div className="nicknamePage__body">
         <div className="nicknamePage__avatar">
-          <Icon width={80} height={80} />
+          <Icon width={52} height={52} />
         </div>
 
         <div className="nicknamePage__field">
