@@ -13,7 +13,7 @@ import './styles/NicknamePage.css';
 
 function getTokenInfo() {
   try {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('accessToken');
     if (!token) return null;
     return jwtDecode(token);
   } catch {

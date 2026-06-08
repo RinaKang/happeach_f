@@ -29,7 +29,7 @@ const useMonthlyReport = () => {
   useEffect(() => {
     const fetchAvailableMonths = async () => {
       try {
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem('accessToken');
         const { data } = await axios.get(`${BASE_URL}/reports/available-months`, {
           params: { userId: getUserIdFromToken() },
           headers: token ? { Authorization: `Bearer ${token}` } : {},
@@ -60,7 +60,7 @@ const useMonthlyReport = () => {
       setIsLoading(true);
       setError(null);
       try {
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem('accessToken');
         const { data } = await axios.get(`${BASE_URL}/reports/monthly`, {
           params: { year, month, userId: getUserIdFromToken() },
           headers: token ? { Authorization: `Bearer ${token}` } : {},

@@ -4,7 +4,7 @@ import { jwtDecode } from 'jwt-decode';
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const getHeader = () => {
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem('accessToken');
   return token ? { Authorization: `Bearer ${token}` } : {};
 };
 
@@ -31,7 +31,7 @@ export const saveNicknameForToken = (token, nickname) => {
 
 export const fetchAndSaveNickname = async () => {
   try {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('accessToken');
     if (!token) return null;
 
     const { data } = await axios.get(`${BASE_URL}/users/me`, { headers: getHeader() });
@@ -58,11 +58,11 @@ export const updateNickname = async (nickname) => {
 };
 
 export const logout = () => {
-  localStorage.removeItem('token');
+  localStorage.removeItem('accessToken');
 };
 
 export const deleteAccount = async () => {
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem('accessToken');
   await axios.delete(`${BASE_URL}/users/me`, { headers: getHeader() });
 
   if (token) {
@@ -74,5 +74,5 @@ export const deleteAccount = async () => {
     }
   }
 
-  localStorage.removeItem('token');
+  localStorage.removeItem('accessToken');
 };

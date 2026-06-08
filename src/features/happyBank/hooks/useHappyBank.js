@@ -6,7 +6,7 @@ import { DEFAULT_BANK_NAME } from '../constants/setup';
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const getHeader = () => {
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem('accessToken');
   return token ? { Authorization: `Bearer ${token}` } : {};
 };
 

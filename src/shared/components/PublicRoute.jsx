@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 
 export const PublicRoute = () => {
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem('accessToken');
 
   // 이미 로그인했다면 메인(캘린더) 화면으로 튕겨냄
   if (token) {
