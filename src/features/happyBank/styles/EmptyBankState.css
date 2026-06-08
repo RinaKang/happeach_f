@@ -51,7 +51,7 @@
 }
 
 .emptyBankState__message {
-color: var(--Gray-30, #B1B8BE);
+color: #FFB0AD;
 
 /* Body Medium/small */
 font-family: Pretendard;

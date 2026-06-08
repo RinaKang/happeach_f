@@ -12,6 +12,7 @@ import SavingsProgressPanel from './components/SavingsProgressPanel';
 import SavingsRecordList from './components/SavingsRecordList';
 import GoalAchievedModal from './components/detail/GoalAchievedModal';
 import SavingsRecordModal from './components/detail/SavingsRecordModal';
+import Devider from '../../assets/icons/common/Devider';
 import useHappyBank from './hooks/useHappyBank';
 import useBankDetail from './hooks/useBankDetail';
 import useWithdraw from './hooks/useWithdraw';
@@ -291,6 +292,7 @@ function HappyBankPage() {
           onEdit={() => navigate(`/happybank/${bank.id}/edit`, { state: { bank } })}
         />
       ))}
+      <Devider width={343} fill="#FFE1E0" />
       <AddBankButton onClick={() => navigate('/happybank/setup')} />
     </div>
   );
