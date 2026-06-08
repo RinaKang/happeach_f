@@ -64,7 +64,16 @@ function formatReceiptDate(dateStr) {
 
 function formatReceiptTime(record) {
   const timeSource = record?.createdAt ?? record?.time ?? record?.id;
-  const date = new Date(timeSource);
+  if (timeSource == null) return '--:--:--';
+
+  // 백엔드가 UTC 시각을 타임존 표기 없는 "2026-06-08T16:17:07.483506" 형태로 내려줌
+  // → UTC로 명시 파싱해야 실제 로컬(KST) 저금 시간이 정확히 나옴
+  const str = String(timeSource);
+  const hasTimezone = /[zZ]|[+-]\d{2}:?\d{2}$/.test(str);
+  const normalized = /^\d{4}-\d{2}-\d{2}T/.test(str) && !hasTimezone
+    ? `${str.replace(/(\.\d{3})\d*$/, '$1')}Z`
+    : str;
+  const date = new Date(normalized);
 
   if (Number.isNaN(date.getTime())) {
     return '--:--:--';

@@ -13,10 +13,19 @@ const getHeader = () => {
 // 백엔드 goalType(AMOUNT/PERIOD) → 프론트엔드(amount/period) 변환
 const mapGoalType = (type) => (type === 'AMOUNT' ? 'amount' : 'period');
 
-// "2026-05-01T14:30:00" → "2026.05.01"
+// 백엔드가 UTC 시각을 타임존 표기 없는 "2026-06-08T16:17:07.483506" 형태로 내려줌
+// → UTC로 명시 파싱 후 로컬(KST) 날짜로 변환해야 실제 생성일(예: "2026.06.09")이 정확히 나옴
 const formatDate = (dateStr) => {
   if (!dateStr) return null;
-  return String(dateStr).slice(0, 10).replace(/-/g, '.');
+  const str = String(dateStr);
+  const hasTimezone = /[zZ]|[+-]\d{2}:?\d{2}$/.test(str);
+  const utcStr = hasTimezone ? str : `${str.replace(/(\.\d{3})\d*$/, '$1')}Z`;
+  const date = new Date(utcStr);
+  if (Number.isNaN(date.getTime())) return null;
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  return `${y}.${m}.${d}`;
 };
 
 // 백엔드 Account 응답 → 프론트엔드 bank 객체 변환

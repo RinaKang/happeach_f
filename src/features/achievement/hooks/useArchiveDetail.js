@@ -9,14 +9,21 @@ const getHeader = () => {
   return token ? { Authorization: `Bearer ${token}` } : {};
 };
 
+// 백엔드가 UTC 시각을 타임존 표기 없는 "2026-06-08T16:17:07.483506" 형태로 내려줌
+// → UTC로 명시 파싱 후 로컬(KST) 날짜로 변환해야 실제 날짜(예: "2026.06.09")가 정확히 나옴
 const formatDate = (dateStr) => {
-  if (!dateStr) 
+  if (!dateStr)
     return '';
 
-  const d = new Date(dateStr);
+  const str = String(dateStr);
+  const hasTimezone = /[zZ]|[+-]\d{2}:?\d{2}$/.test(str);
+  const utcStr = /^\d{4}-\d{2}-\d{2}T/.test(str) && !hasTimezone
+    ? `${str.replace(/(\.\d{3})\d*$/, '$1')}Z`
+    : str;
+  const d = new Date(utcStr);
 
-  if (isNaN(d)) 
-    return String(dateStr).slice(0, 10).replace(/-/g, '.');
+  if (isNaN(d))
+    return str.slice(0, 10).replace(/-/g, '.');
 
   const yyyy = d.getFullYear();
   const mm = String(d.getMonth() + 1).padStart(2, '0');

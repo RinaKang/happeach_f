@@ -11,10 +11,16 @@ const getHeader = () => {
 // 백엔드 type(HAPPY/RECOVER) → 프론트엔드(happy/become) 변환
 const mapTxType = (type) => (type === 'HAPPY' ? 'happy' : 'become');
 
-// 날짜 문자열 → "2026.05.23" 형식으로 변환
+// 백엔드가 UTC 시각을 타임존 표기 없는 "2026-06-08T16:17:07.483506" 형태로 내려줌
+// → UTC로 명시 파싱 후 로컬(KST) 날짜로 변환해야 실제 날짜(예: "2026.06.09")가 정확히 나옴
 const formatDate = (dateStr) => {
   if (!dateStr) return '';
-  const d = new Date(dateStr);
+  const str = String(dateStr);
+  const hasTimezone = /[zZ]|[+-]\d{2}:?\d{2}$/.test(str);
+  const utcStr = /^\d{4}-\d{2}-\d{2}T/.test(str) && !hasTimezone
+    ? `${str.replace(/(\.\d{3})\d*$/, '$1')}Z`
+    : str;
+  const d = new Date(utcStr);
   if (isNaN(d)) return dateStr;
   const yyyy = d.getFullYear();
   const mm = String(d.getMonth() + 1).padStart(2, '0');
