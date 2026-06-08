@@ -147,14 +147,11 @@ const ExpensePage = () => {
         type: type   // formData.type 업데이트
       }));
     }
-
-    console.log("status: ", type);
   }, [type]);   // location.state가 바뀔 때만 실행
 
   useEffect(() => {
     // 수정 모드이고 넘어온 데이터가 있다면 state에 세팅
     if ((isEditMode || isReEva) && editData && Object.keys(editData).length > 0) {
-      console.log("받은 editData: ", editData);
       setFormData(prev => ({
         ...prev,
         ...editData,
@@ -167,8 +164,6 @@ const ExpensePage = () => {
     if (isReEva) {
       setPreEva(editData.evaluation);
     }
-
-    console.log("editData => formData:", formData);
   }, [editData, isEditMode, isReEva]);
 
   useEffect(() => {
@@ -229,7 +224,6 @@ const ExpensePage = () => {
     // 3. 컴포넌트 state도 동기화 (필요시)
     setFormData(submitData);
 
-    console.log('type', location.type);
     e.preventDefault();
 
     // 재평가 모드일 때 + 행복 저금으로 안 가고 저장할 때
@@ -238,7 +232,7 @@ const ExpensePage = () => {
       try {
         // PATCH /expenses/{id}/reevaluate?evaluation=1
         const response = await axios.patch(`${BASE_URL}/expenses/${id}/reevaluate?evaluation=${formData.evaluation}`, {})
-        console.log("보낸 데이터", formData);
+        // console.log("보낸 데이터", formData);
         navigate('/');
         return;
       } catch (error) {
@@ -252,12 +246,12 @@ const ExpensePage = () => {
       if (isEditMode) {
         // 가계부 수정
         const response = await axios.put(`${BASE_URL}/expenses/${id}`, submitData);
-        console.log("보낸 데이터", submitData);
+        // console.log("보낸 데이터", submitData);
 
       } else {
         // 가계부 작성
         const response = await axios.post(`${BASE_URL}/expenses`, submitData);
-        console.log("보낸 데이터", submitData);
+        // console.log("보낸 데이터", submitData);
       }
       navigate('/');
       return;
