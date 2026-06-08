@@ -77,6 +77,18 @@
     /* 18.2px */
 }
 
+.login-text>.text3 {
+    color: var(--Gray-95, #131416);
+
+    /* Body Medium/large */
+    font-family: "Noto Sans KR";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    /* 23.4px */
+}
+
 .login-kakao {
     box-sizing: border-box;
     display: flex;

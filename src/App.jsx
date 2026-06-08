@@ -68,7 +68,7 @@ function App() {
         </Route>
 
         {/* 3. 🌐 오픈 구역 (카카오 인증 처리를 위한 통로) */}
-        <Route path='/auth/kakao' element={<LoginCallbackPage />} />
+        <Route path='/login/callback' element={<LoginCallbackPage />} />
 
       </Routes>
     </Router>
