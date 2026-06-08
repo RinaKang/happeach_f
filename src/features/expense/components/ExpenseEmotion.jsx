@@ -64,7 +64,7 @@ const ExpenseEmotion = ({
 
       } else {
         // 가계부 작성
-        await axios.post('${BASE_URL}/expenses', submitData);
+        await axios.post(`${BASE_URL}/expenses`, submitData);
         // console.log('가계부 저장 작성', submitData);
 
       }
