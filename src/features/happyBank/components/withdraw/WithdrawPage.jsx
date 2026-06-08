@@ -57,25 +57,32 @@ const TYPE_LABEL = {
 const DAY_NAMES = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
 const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-function formatReceiptDate(dateStr) {
-  const date = new Date(String(dateStr).replace(/\./g, '-'));
-  return `${DAY_NAMES[date.getDay()]}, ${MONTH_NAMES[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
-}
-
-function formatReceiptTime(record) {
-  const timeSource = record?.createdAt ?? record?.time ?? record?.id;
-  if (timeSource == null) return '--:--:--';
-
-  // 백엔드가 UTC 시각을 타임존 표기 없는 "2026-06-08T16:17:07.483506" 형태로 내려줌
-  // → UTC로 명시 파싱해야 실제 로컬(KST) 저금 시간이 정확히 나옴
-  const str = String(timeSource);
+// 백엔드가 UTC 시각을 타임존 표기 없는 "2026-06-08T16:17:07.483506" 형태로 내려줌
+// → UTC로 명시 파싱해야 실제 로컬(KST) 시각으로 변환됨
+function parseAsLocalDate(value) {
+  if (value == null) return null;
+  const str = String(value);
   const hasTimezone = /[zZ]|[+-]\d{2}:?\d{2}$/.test(str);
   const normalized = /^\d{4}-\d{2}-\d{2}T/.test(str) && !hasTimezone
     ? `${str.replace(/(\.\d{3})\d*$/, '$1')}Z`
     : str;
   const date = new Date(normalized);
+  return Number.isNaN(date.getTime()) ? null : date;
+}
 
-  if (Number.isNaN(date.getTime())) {
+// record.date는 백엔드가 UTC 기준으로 미리 포맷한 문자열이라 신뢰할 수 없음
+// → createdAt(원본 UTC ISO 시각)을 KST로 변환해 날짜를 계산
+function formatReceiptDate(record) {
+  const date = parseAsLocalDate(record?.createdAt) ?? parseAsLocalDate(record?.date);
+  if (!date) return '';
+
+  return `${DAY_NAMES[date.getDay()]}, ${MONTH_NAMES[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+}
+
+function formatReceiptTime(record) {
+  const date = parseAsLocalDate(record?.createdAt) ?? parseAsLocalDate(record?.time) ?? parseAsLocalDate(record?.id);
+
+  if (!date) {
     return '--:--:--';
   }
 
@@ -124,7 +131,7 @@ function WithdrawPage({ onBack, bankInfo, record, onDelete }) {
       </h2>
 
       <p className="withdrawPage__receiptDate">
-        {formatReceiptDate(record.date)}
+        {formatReceiptDate(record)}
       </p>
 
       <div className="withdrawPage__infoRows">
