@@ -44,7 +44,6 @@
   inset: 0;
   z-index: 1000;
   width: 100%;
-  min-height: 100vh;
   background: #fff;
   overflow-y: auto;
   display: flex;
