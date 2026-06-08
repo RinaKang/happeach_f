@@ -6,9 +6,10 @@
 .bankSetupPage {
   animation: pageSlideIn 0.25s ease-out;
   display: flex;
-  width: 375px;
-  max-width: 100%;
-  padding: 48px 16px;
+  width: 100%;
+  max-width: 375px;
+  min-height: 100dvh;
+  padding: 48px 16px calc(16px + env(safe-area-inset-bottom, 0px));
   flex: 1;
   flex-direction: column;
   align-items: flex-start;
@@ -211,6 +212,8 @@
 .bankSetupPage__form {
   display: flex;
   width: 100%;
+  flex: 1;
+  min-height: 0;
   flex-direction: column;
   align-items: flex-start;
   gap: 26px;

@@ -14,9 +14,9 @@
   animation: pageSlideIn 0.25s ease-out;
   display: flex;
   flex-direction: column;
-  width: 375px;
-  max-width: 100%;
-  min-height: 100vh;
+  width: 100%;
+  max-width: 375px;
+  min-height: 100dvh;
   background: #fff;
   box-sizing: border-box;
   text-align: left;
@@ -92,6 +92,7 @@
 
 .depositPage__form {
   flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -99,7 +100,7 @@
 
 .depositPage__submitBtn {
   flex-shrink: 0;
-  margin: 24px 16px;
+  margin: 24px 16px calc(16px + env(safe-area-inset-bottom, 0px));
   height: 52px;
   border: none;
   border-radius: 999px;
@@ -118,6 +119,8 @@
   /* 21.6px */
   letter-spacing: -1px;
   transition: background 0.15s;
+  align-self: stretch;
+  box-sizing: border-box;
 }
 
 .depositPage__submitBtn--active {
