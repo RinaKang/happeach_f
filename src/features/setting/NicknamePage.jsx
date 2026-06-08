@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
 import ChevronLeft from '../../assets/icons/common/ChevronLeft';
-import UserIcon from '../../assets/icons/common/UserIcon';
+import Icon from '../../assets/icons/login/Icon';
 import Delite from '../../assets/icons/common/Delite';
 import {
   getDefaultNickname,
@@ -68,7 +68,7 @@ function NicknamePage() {
 
       <div className="nicknamePage__body">
         <div className="nicknamePage__avatar">
-          <UserIcon width={20} height={22} />
+          <Icon />
         </div>
 
         <div className="nicknamePage__field">

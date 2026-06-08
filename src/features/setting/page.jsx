@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
 import ChevronLeft from '../../assets/icons/common/ChevronLeft';
-import UserIcon from '../../assets/icons/common/UserIcon';
+import Icon from '../../assets/icons/login/Icon';
 import ChevronRight from '../../assets/icons/common/ChevronRight';
 import {
   deleteAccount,
@@ -63,7 +63,7 @@ function SettingPage() {
 
       <div className="settingPage__profile">
         <div className="settingPage__avatar">
-          <UserIcon width={20} height={22} />
+          <Icon />
         </div>
         <span className="settingPage__nickname">{displayName}</span>
       </div>
