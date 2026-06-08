@@ -73,9 +73,9 @@ const CalendarPage = () => {
       });
       setMonthData({
         // 값이 없으면 프론트에서 임의로 0이나 빈 배열로 초기화
-        monthIncome: response.data.monthIncome ?? 0,
-        monthExpense: response.data.monthExpense ?? 0,
-        reevaluationCount: response.data.reevaluationCount ?? 0,
+        monthIncome: response.data?.monthIncome ?? 0,
+        monthExpense: response.data?.monthExpense ?? 0,
+        reevaluationCount: response.data?.reevaluationCount ?? 0,
         days: response.data.days || [] // map 에러 방지를 위해 빈 배열 필수!
       });
     } catch (error) {
