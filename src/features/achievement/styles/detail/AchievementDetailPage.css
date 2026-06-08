@@ -11,6 +11,18 @@
   padding: 20px 16px;
   box-sizing: border-box;
   background-color: #F4F5F6;
+  background-image: url('../../../../assets/images/BG_375x812.png');
+  background-image: -webkit-image-set(
+    url('../../../../assets/images/BG_375x812.png') 1x,
+    url('../../../../assets/images/BG_2x.png') 2x
+  );
+  background-image: image-set(
+    url('../../../../assets/images/BG_375x812.png') 1x,
+    url('../../../../assets/images/BG_2x.png') 2x
+  );
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
   min-height: 100vh;
 }
 
