@@ -60,7 +60,6 @@ const CalendarPage = () => {
   // 전체 거래 데이터 불러오기 (한 번만 실행)
   const fetchData = async () => {
     const userId = getUserIdFromToken();
-    console.log(userId);
 
     try {
       // GET /expenses/calendar/monthly?userId=1&year=2026&month=3
@@ -95,7 +94,7 @@ const CalendarPage = () => {
           date: date      // '2026-03-21'
         }
       });
-      console.log('주간 데이터 ', response.data);
+      // console.log('주간 데이터 ', response.data);
       setWeekData(response.data || []);
     } catch (error) {
 
@@ -132,7 +131,7 @@ const CalendarPage = () => {
       });
       // const response = testReEva;
       setReEvaData(response?.data.items || []);
-      console.log("재평가대상", response.data.items);
+      // console.log("재평가대상", response.data.items);
     } catch (error) {
       setReEvaData([]);
     }
@@ -157,7 +156,7 @@ const CalendarPage = () => {
       isFirstRender.current = false;
 
       fetchReevaluatedData(); // 재평가해야되는 내역들
-      console.log("마운트 시점에만 동작");
+      // console.log("마운트 시점에만 동작");
     }
   }, []); // '마운트 시점'에만 동작
 
@@ -170,9 +169,9 @@ const CalendarPage = () => {
     getDayData();
   }, [selectedDate])
 
-  useEffect(() => {
-    console.log('선택된 날', selectedDate);
-  }, [selectedDate]);
+  // useEffect(() => {
+  //   console.log('선택된 날', selectedDate);
+  // }, [selectedDate]);
 
 
   // ==================== 월 이동 ====================

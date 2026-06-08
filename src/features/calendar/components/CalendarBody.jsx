@@ -29,9 +29,9 @@ const CalendarBody = ({
   const monthdata = useDaysMap(monthData?.days);
   const weekdata = useWeeksMap(weekData);
 
-  useEffect(() => {
-    console.log('CalendarBody monthdata', monthdata);
-  }, [monthdata])
+  // useEffect(() => {
+  //   console.log('CalendarBody monthdata', monthdata);
+  // }, [monthdata])
 
   // 드래그 이벤트
   const handleMouseDown = (e) => {

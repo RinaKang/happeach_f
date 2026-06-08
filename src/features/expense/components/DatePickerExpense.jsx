@@ -44,7 +44,7 @@ const DatePickerExpense = ({
       datePickerRef.current.setOpen(false); // 캘린더 강제 닫기
     }
 
-    console.log('tempDate: ', tempDate);
+    // console.log('tempDate: ', tempDate);
   };
 
   const handleCancel = () => {

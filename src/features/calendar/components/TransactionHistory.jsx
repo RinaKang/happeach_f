@@ -49,7 +49,7 @@ const TransactionHistory = ({
       }
     });
 
-    console.log(item);
+    // console.log(item);
   };
 
   const category = {
