@@ -1,6 +1,6 @@
 .happyBankNudgeBanner {
   display: flex;
-  width: 343px;
+  width: 100%;
   padding: 18px 22px;
   align-items: center;
   gap: 10px;
