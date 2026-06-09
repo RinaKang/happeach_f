@@ -3,7 +3,6 @@ import { useMemo, useRef, useState } from 'react';
 import { toPng } from 'html-to-image';
 import ChevronLeft from '../../../../assets/icons/common/ChevronLeft';
 import stickerImg from '../../../../assets/images/sticker.png';
-import paperTextureImg from '../../../../assets/images/papertexture.png';
 import '../../styles/withdraw/WithdrawPage.css';
 import '../../styles/setup/DeleteBankModal.css';
 
@@ -107,11 +106,9 @@ function WithdrawPage({ onBack, bankInfo, record, onDelete }) {
     isDownloadingRef.current = true;
 
     try {
-      const ratio = Math.max(window.devicePixelRatio || 1, 2);
-      // html-to-image는 첫 호출 시 CSS background-image를 누락하는 버그가 있어
-      // 워밍업 호출로 이미지를 캐시한 뒤 실제 캡처
-      await toPng(exportRef.current, { pixelRatio: ratio });
-      const dataUrl = await toPng(exportRef.current, { pixelRatio: ratio });
+      const dataUrl = await toPng(exportRef.current, {
+        pixelRatio: Math.max(window.devicePixelRatio || 1, 2),
+      });
 
       const link = document.createElement('a');
       const safeDate = String(record.date ?? 'receipt').replace(/[^\w-]+/g, '-');
@@ -232,8 +229,8 @@ function WithdrawPage({ onBack, bankInfo, record, onDelete }) {
         </div>
       </div>
 
-      {/* 다운로드 전용 캡처 영역 — clip으로 숨김 (모바일에서 fixed+9999px은 렌더링 안됨) */}
-      <div style={{ position: 'absolute', overflow: 'hidden', width: '1px', height: '1px', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap' }}>
+      {/* 다운로드 전용 캡처 영역 — 화면에 보이지 않음 */}
+      <div style={{ position: 'fixed', left: '-9999px', top: 0, pointerEvents: 'none' }}>
         <div
           ref={exportRef}
           style={{ background: '#ffb0ad', padding: '26px 25px 16px', width: '376px', boxSizing: 'border-box' }}
@@ -244,10 +241,7 @@ function WithdrawPage({ onBack, bankInfo, record, onDelete }) {
               src={stickerImg}
               alt=""
             />
-            <div
-              className="withdrawPage__receipt"
-              style={{ backgroundImage: `url(${paperTextureImg})` }}
-            >
+            <div className="withdrawPage__receipt">
               {renderReceiptContent()}
             </div>
           </div>
