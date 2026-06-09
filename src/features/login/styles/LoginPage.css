@@ -7,7 +7,7 @@
     gap: 10px;
     align-self: stretch;
 
-    background-image: url('./loginbg.png');
+    background-image: url('../../../assets/images/BG_2x.png');
     /* background: url(<path-to-image>) lightgray 0px -0.395px / 100% 135.333% no-repeat; */
 }
 

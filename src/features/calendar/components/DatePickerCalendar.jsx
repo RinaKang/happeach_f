@@ -34,7 +34,7 @@ const DatePickerCalendar = ({
   // datePicker input 커스텀
   const CustomInput = forwardRef(({ value, onClick }, ref) =>
     <div className='custom-input' onClick={onClick} ref={ref}>
-      {value} <span className='disclosure'><DisClosure /></span>
+      {value} <span className='disclosure'><DisClosure fill='#FF9793' /></span>
     </div>
   );
 
