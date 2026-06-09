@@ -54,7 +54,7 @@ function NicknamePage() {
     <div className="nicknamePage">
       <div className="nicknamePage__header">
         <button className="nicknamePage__backBtn" type="button" onClick={() => navigate(-1)}>
-          <ChevronLeft stroke="#131416" />
+          <ChevronLeft stroke="#B1B8BE" />
         </button>
         <button
           className="nicknamePage__doneBtn"

@@ -31,8 +31,9 @@ function App() {
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     };
     setScreenSize();
-    window.addEventListener('resize', setScreenSize);
-    return () => window.removeEventListener('resize', setScreenSize);
+    // resize 대신 orientationchange만 사용 — iOS에서 스크롤 시 resize가 계속 발생해 텍스트 떨림 유발
+    window.addEventListener('orientationchange', setScreenSize);
+    return () => window.removeEventListener('orientationchange', setScreenSize);
   }, []);
 
   const now = new Date();
