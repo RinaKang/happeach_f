@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Outlet, Navigate } from 'react-router-dom';
 import './App.css'
 import Header from './shared/components/Header'
@@ -25,6 +25,16 @@ const MainLayout = () => (
 );
 
 function App() {
+  useEffect(() => {
+    const setScreenSize = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+    setScreenSize();
+    window.addEventListener('resize', setScreenSize);
+    return () => window.removeEventListener('resize', setScreenSize);
+  }, []);
+
   const now = new Date();
   const currentYear = now.getFullYear();
   const currentMonth = String(now.getMonth() + 1).padStart(2, '0');

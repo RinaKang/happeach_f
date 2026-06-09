@@ -23,7 +23,7 @@
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 /* 회차 요약 카드 */

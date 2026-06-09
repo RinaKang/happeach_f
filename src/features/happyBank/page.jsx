@@ -173,7 +173,7 @@ function HappyBankPage() {
   const matchWithdraw = useMatch('/happybank/:accountId/withdraw');
   const matchDetail = useMatch('/happybank/:accountId');
 
-  const { banks, hasBank, createBank, updateBank, deleteBank, completeBank } = useHappyBank();
+  const { banks, hasBank, isLoading, createBank, updateBank, deleteBank, completeBank } = useHappyBank();
   // useDeposit은 DepositPage 내부에서 직접 사용
 
   // ── 통장 생성 / 수정 화면 ──
@@ -272,6 +272,8 @@ function HappyBankPage() {
   }
 
   // ── 통장 목록 / 빈 상태 화면 ──
+  if (isLoading) return <div className="happyBankPage" />;
+
   if (!hasBank) {
     return (
       <div className="happyBankPage">

@@ -41,7 +41,7 @@
   background-position: top center;
   background-repeat: no-repeat;
   font-family: Pretendard, var(--sans);
-  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .happyBankPageOverlay {
