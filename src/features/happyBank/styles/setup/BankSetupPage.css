@@ -1,10 +1,4 @@
-@keyframes pageSlideIn {
-  from { opacity: 0; transform: translateX(20px); }
-  to   { opacity: 1; transform: translateX(0);    }
-}
-
 .bankSetupPage {
-  animation: pageSlideIn 0.25s ease-out;
   display: flex;
   width: 100%;
   max-width: 375px;

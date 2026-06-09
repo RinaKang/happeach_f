@@ -1,8 +1,3 @@
-@keyframes pageFadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 .happyBankPage__back {
   display: flex;
   align-items: center;

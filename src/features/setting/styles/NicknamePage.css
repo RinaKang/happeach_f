@@ -1,17 +1,4 @@
-@keyframes pageFadeIn {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 .nicknamePage {
-  animation: pageFadeIn 0.25s ease-out;
   display: flex;
   flex-direction: column;
   min-height: calc(var(--vh, 1vh) * 100);
