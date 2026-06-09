@@ -53,6 +53,8 @@
 
 body {
   margin: 0;
+  background-color: #FFF0EF;
+  overscroll-behavior-y: none;
 }
 
 #root {
