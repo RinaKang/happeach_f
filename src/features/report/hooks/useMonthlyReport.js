@@ -77,7 +77,7 @@ const useMonthlyReport = () => {
         const emotionRatio = etcRatio > 0 ? [...top4, { emotion: '기타', ratio: etcRatio }] : top4;
 
         const satisfactionByEmotion = Object.entries(data.emotionAvgEvaluation ?? {})
-          .map(([emotion, avgScore]) => ({ emotion: toKorean(emotion), avgScore }))
+          .map(([emotion, avgScore]) => ({ emotion: toKorean(emotion), avgScore: avgScore + 1 }))
           .sort((a, b) => b.avgScore - a.avgScore);
 
         setReport({
