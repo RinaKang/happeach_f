@@ -3,6 +3,7 @@ import { useMemo, useRef, useState } from 'react';
 import { toPng } from 'html-to-image';
 import ChevronLeft from '../../../../assets/icons/common/ChevronLeft';
 import stickerImg from '../../../../assets/images/sticker.png';
+import paperTextureImg from '../../../../assets/images/papertexture.png';
 import '../../styles/withdraw/WithdrawPage.css';
 import '../../styles/setup/DeleteBankModal.css';
 
@@ -231,8 +232,8 @@ function WithdrawPage({ onBack, bankInfo, record, onDelete }) {
         </div>
       </div>
 
-      {/* 다운로드 전용 캡처 영역 — 화면에 보이지 않음 */}
-      <div style={{ position: 'fixed', left: '-9999px', top: 0, pointerEvents: 'none' }}>
+      {/* 다운로드 전용 캡처 영역 — clip으로 숨김 (모바일에서 fixed+9999px은 렌더링 안됨) */}
+      <div style={{ position: 'absolute', overflow: 'hidden', width: '1px', height: '1px', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap' }}>
         <div
           ref={exportRef}
           style={{ background: '#ffb0ad', padding: '26px 25px 16px', width: '376px', boxSizing: 'border-box' }}
@@ -243,7 +244,10 @@ function WithdrawPage({ onBack, bankInfo, record, onDelete }) {
               src={stickerImg}
               alt=""
             />
-            <div className="withdrawPage__receipt">
+            <div
+              className="withdrawPage__receipt"
+              style={{ backgroundImage: `url(${paperTextureImg})` }}
+            >
               {renderReceiptContent()}
             </div>
           </div>
