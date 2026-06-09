@@ -106,9 +106,11 @@ function WithdrawPage({ onBack, bankInfo, record, onDelete }) {
     isDownloadingRef.current = true;
 
     try {
-      const dataUrl = await toPng(exportRef.current, {
-        pixelRatio: Math.max(window.devicePixelRatio || 1, 2),
-      });
+      const ratio = Math.max(window.devicePixelRatio || 1, 2);
+      // html-to-image는 첫 호출 시 CSS background-image를 누락하는 버그가 있어
+      // 워밍업 호출로 이미지를 캐시한 뒤 실제 캡처
+      await toPng(exportRef.current, { pixelRatio: ratio });
+      const dataUrl = await toPng(exportRef.current, { pixelRatio: ratio });
 
       const link = document.createElement('a');
       const safeDate = String(record.date ?? 'receipt').replace(/[^\w-]+/g, '-');
