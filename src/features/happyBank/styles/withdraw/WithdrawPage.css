@@ -8,12 +8,10 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 375px;
   min-height: 100dvh;
   background: #ffb0ad;
   font-family: Pretendard, var(--sans);
   box-sizing: border-box;
-  margin: 0 auto;
 }
 
 .withdrawPage__captureArea {
