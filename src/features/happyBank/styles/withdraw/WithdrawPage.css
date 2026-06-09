@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 390px;
   min-height: 100dvh;
   background: #ffb0ad;
   font-family: Pretendard, var(--sans);
