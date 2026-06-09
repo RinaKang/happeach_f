@@ -47,12 +47,9 @@ function ReportPage() {
     return Math.round(((emotionRatio[0].ratio - avgRatio) / avgRatio) * 100);
   })();
 
-  // 부정 감정이 긍정 감정보다 비율이 높을 때만 넛지 배너 표시
+  // 1위 감정이 부정 감정일 때 넛지 배너 표시
   const NEGATIVE_EMOTIONS = new Set(['우울', '스트레스', '충동']);
-  const POSITIVE_EMOTIONS = new Set(['기쁨', '평온', '설렘']);
-  const negativeRatio = emotionRatio.filter((e) => NEGATIVE_EMOTIONS.has(e.emotion)).reduce((s, e) => s + e.ratio, 0);
-  const positiveRatio = emotionRatio.filter((e) => POSITIVE_EMOTIONS.has(e.emotion)).reduce((s, e) => s + e.ratio, 0);
-  const showNudgeBanner = negativeRatio > positiveRatio;
+  const showNudgeBanner = emotionRatio.length > 0 && NEGATIVE_EMOTIONS.has(emotionRatio[0].emotion);
 
   return (
     <div className="reportPage">
