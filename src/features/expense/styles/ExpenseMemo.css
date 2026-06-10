@@ -1,0 +1,43 @@
+.memo-content {
+    box-sizing: border-box;
+    display: flex;
+    width: 326px;
+    height: 56px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.memo-content>.input-content input {
+    width: 100%;
+    padding-right: 60px;
+}
+
+.char-count {
+  position: absolute;
+  right: 12px;
+  bottom: 8px;
+  /* 디자인에 따라 top이나 bottom으로 조절 */
+  color: var(--Gray-30, #B1B8BE);
+
+  /* Body Medium/xsmall */
+  font-family: "Noto Sans KR";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  /* 14.4px */
+}
+
+/* 현재 글자 수 색상 (피그마 시안의 살짝 붉은/오렌지빛 도는 컬러 예시) */
+.char-count .current {
+  color: var(--Primary-base, #FFB0AD);
+
+  /* Body Medium/xsmall */
+  font-family: "Noto Sans KR";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  /* 14.4px */
+}

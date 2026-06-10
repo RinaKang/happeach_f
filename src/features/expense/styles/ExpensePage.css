@@ -397,16 +397,6 @@ input:focus+.clear {
     gap: 10px;
 }
 
-.memo-content {
-    box-sizing: border-box;
-    display: flex;
-    width: 326px;
-    height: 56px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
-}
-
 .devider {
     width: 314px;
     height: 1px;

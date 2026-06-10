@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/ExpenseMemo.css'
 
 const ExpenseMemo = ({
   formData,
@@ -16,7 +17,11 @@ const ExpenseMemo = ({
           placeholder='메모할 내용을 적어 주세요'
           value={formData?.memo}
           onChange={handleChange}
+          maxLength={100}
         ></input>
+        <span className='char-count'>
+          <span className='current'>{formData?.memo?.length || 0}</span>/100
+        </span>
       </div>
     </div>
   )
