@@ -7,15 +7,12 @@ const MAX_LENGTH = 100;
 
 function MemoInput({ value, onChange }) {
   const [isFocused, setIsFocused] = useState(false);
-  const [isTouched, setIsTouched] = useState(false);
   const textareaRef = useRef(null);
 
   const hasError = value.length >= MAX_LENGTH;
-  const showCounter = isFocused || isTouched || value.length > 0;
 
   const handleBlur = () => {
     setIsFocused(false);
-    setIsTouched(true);
   };
 
   // value가 바뀔 때마다 높이 자동 조절
@@ -45,11 +42,9 @@ function MemoInput({ value, onChange }) {
             inputMode="text"
             aria-label="메모"
           />
-          {showCounter && (
-            <span className="memoInput__count">
-              <span className="memoInput__count--current">{value.length}</span>/{MAX_LENGTH}
-            </span>
-          )}
+          <span className="memoInput__count">
+            <span className="memoInput__count--current">{value.length}</span>/{MAX_LENGTH}
+          </span>
           {isFocused && value && (
             <button
               className="memoInput__deleteBtn"
