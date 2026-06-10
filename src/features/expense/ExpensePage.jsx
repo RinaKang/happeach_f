@@ -198,7 +198,7 @@ const ExpensePage = () => {
 
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: finalValue
     }));
   };
 
