@@ -250,7 +250,7 @@
     border-top: 1px solid var(--Gray2, #EEEEEF);
     background: #FFF;
     /* 1. 남은 하단 공간을 흰색으로 전부 채웁니다 */
-    flex-grow: 1; 
+    flex-grow: 1;
     padding-bottom: 70px;
 }
 
@@ -360,7 +360,7 @@
     gap: 2px;
 }
 
-.title-content>.title {
+.title-content>.title, .no-transacton {
     color: var(--text-black, #1A1A1A);
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: Pretendard;
@@ -372,7 +372,7 @@
     letter-spacing: -0.4px;
 }
 
-.title-content>.category-text {
+.title-content>.category-text, .detail>.memo-text {
     color: var(--text-gray, #6B7581);
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: Pretendard;
