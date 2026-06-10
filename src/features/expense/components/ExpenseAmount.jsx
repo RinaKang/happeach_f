@@ -83,7 +83,7 @@ const ExpenseAmount = ({
         <label for='amount'>금액</label>
         <div tabindex="0" className='input-content'>
           <input
-            type='number'
+            type='text'
             id='amount'
             name='amount'
             placeholder='0원'
