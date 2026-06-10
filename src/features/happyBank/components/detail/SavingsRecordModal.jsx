@@ -3,7 +3,7 @@ import '../../styles/detail/SavingsRecordModal.css';
 // 행복저금 메모 상세 모달
 function SavingsRecordModal({ record, onClose }) {
   const { date, type, memo, hashtag, amount } = record;
-  const typeLabel = type === 'happy' ? '행복저금' : '행복해지는 저금';
+  const typeLabel = type === 'happy' ? '행복 저금' : '행복해지는 저금';
 
   return (
     <div className="savingsRecordModal__overlay" onClick={onClose}>
