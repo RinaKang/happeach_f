@@ -6,9 +6,9 @@ function WithdrawEmptyModal({ onBack, onDeposit }) {
       <div className="withdrawEmptyModal__card">
         <p className="withdrawEmptyModal__title">인출할 내역이 없어요</p>
         <p className="withdrawEmptyModal__desc">
-          아직 쌓인 행복 내역이 없어요.
+          저금한 내역이 존재하지 않아요.
           <br />
-          입금 후 행복을 인출해보세요!
+          저금 후 행복을 인출해보세요!
         </p>
         <div className="withdrawEmptyModal__actions">
           <button className="withdrawEmptyModal__backBtn" onClick={onBack} type="button">

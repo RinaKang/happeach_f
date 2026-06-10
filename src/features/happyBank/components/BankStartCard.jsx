@@ -10,7 +10,7 @@ function BankStartCard({ onClick }) {
       </div>
       <div className="bankStartCard__text">
         <span className="bankStartCard__sub">행복해지고 싶다면?</span>
-        <span className="bankStartCard__title">행복저금 시작하기</span>
+        <span className="bankStartCard__title">행복 저금 시작하기</span>
       </div>
       <span className="bankStartCard__arrow">
         <ChevronRight stroke="#B1B8BE" />

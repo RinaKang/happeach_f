@@ -98,7 +98,7 @@ function SettingPage() {
           onClick={() => setShowDeleteModal(true)}
           disabled={isLoading}
         >
-          <span className="settingPage__rowLabel settingPage__rowLabel--danger">회원탈퇴</span>
+          <span className="settingPage__rowLabel settingPage__rowLabel--danger">회원 탈퇴</span>
           <ChevronRight stroke="#B1B8BE" />
         </button>
       </div>
@@ -108,7 +108,7 @@ function SettingPage() {
           <div className="settingPage__modal" onClick={(e) => e.stopPropagation()}>
             <div className="settingPage__modalTextGroup">
               <p className="settingPage__modalTitle">로그아웃</p>
-              <p className="settingPage__modalDesc">로그아웃하시겠습니까?</p>
+              <p className="settingPage__modalDesc">로그아웃할까요?</p>
             </div>
             <div className="settingPage__modalActions">
               <button className="settingPage__modalBtn settingPage__modalBtn--cancel" type="button" onClick={() => setShowLogoutModal(false)}>취소</button>
@@ -122,8 +122,9 @@ function SettingPage() {
         <div className="settingPage__modalOverlay" onClick={() => setShowDeleteModal(false)}>
           <div className="settingPage__modal" onClick={(e) => e.stopPropagation()}>
             <div className="settingPage__modalTextGroup">
-              <p className="settingPage__modalTitle">회원탈퇴</p>
-              <p className="settingPage__modalDesc">회원을 탈퇴하시겠습니까?{'\n'}모든 데이터가 삭제됩니다.</p>
+              <p className="settingPage__modalTitle">회원 탈퇴</p>
+              <p className="settingPage__modalDesc">모든 데이터가 삭제돼요.
+                {'\n'}정말 탈퇴할까요?</p>
             </div>
             <div className="settingPage__modalActions">
               <button className="settingPage__modalBtn settingPage__modalBtn--cancel" type="button" onClick={() => setShowDeleteModal(false)} disabled={isLoading}>취소</button>

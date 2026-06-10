@@ -6,8 +6,8 @@ function SetupCompleteModal({ bankName, onConfirm, onDeposit }) {
       <div className="setupCompleteModal">
         <h2 className="setupCompleteModal__title">개설 완료</h2>
         <p className="setupCompleteModal__desc">
-          행복통장이 개설 완료되었어요!<br />
-          행복저금을 시작해볼까요?
+          행복 통장이 개설 완료되었어요!<br />
+          행복 저금을 시작해 볼까요?
         </p>
         <div className="setupCompleteModal__actions">
           <button className="setupCompleteCheck__btn" onClick={onConfirm}>

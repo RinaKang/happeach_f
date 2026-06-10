@@ -98,7 +98,7 @@ function BankSummaryCard({ bankInfo, onDeposit, onWithdraw, onEdit, onClick }) {
           onClick={(e) => { e.stopPropagation(); onWithdraw?.(); }}
           type="button"
         >
-          행복인출
+          행복 인출
         </button>
         <button
           className="bankSummaryCard__btn bankSummaryCard__btn--deposit"
