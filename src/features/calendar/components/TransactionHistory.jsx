@@ -125,6 +125,7 @@ const TransactionHistory = ({
             {emo && <div className='emotion-tag'>
               {emo.icon}{emo.label}
             </div>}
+            <div className='category-text'>{item.memo}</div>
           </div>
           <div className={`amount-row ${isIncome ? 'income' : 'expense'}`}>
             {isIncome ? '' : '- '}{amount.toLocaleString()}원

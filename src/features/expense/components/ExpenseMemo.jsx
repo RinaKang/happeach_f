@@ -13,7 +13,7 @@ const ExpenseMemo = ({
           type='text'
           id='memo'
           name='memo'
-          placeholder='메모할 내용을 적어주세요'
+          placeholder='메모할 내용을 적어 주세요'
           value={formData?.memo}
           onChange={handleChange}
         ></input>
