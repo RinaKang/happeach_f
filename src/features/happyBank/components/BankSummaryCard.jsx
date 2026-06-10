@@ -61,7 +61,7 @@ function BankSummaryCard({ bankInfo, onDeposit, onWithdraw, onEdit, onClick }) {
         <button
           className="bankSummaryCard__editBtn"
           type="button"
-          aria-label="행복통장 수정"
+          aria-label="행복 통장 수정"
           onClick={(e) => { e.stopPropagation(); onEdit?.(); }}
         >
           <SystemMore width={24} height={24} stroke="#B1B8BE" />

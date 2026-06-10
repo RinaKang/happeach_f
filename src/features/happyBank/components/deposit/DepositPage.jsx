@@ -9,7 +9,7 @@ import SavingsTypeSelect from './SavingsTypeSelect';
 import '../../styles/deposit/DepositPage.css';
 
 // accountId: 저금할 통장 ID (POST /transactions/deposit 에 필요)
-function DepositPage({ accountId, onComplete, onBack, bankName = '행복통장', initialType = 'happy' }) {
+function DepositPage({ accountId, onComplete, onBack, bankName = '행복 통장', initialType = 'happy' }) {
   const [type, setType] = useState(initialType);
   const [amount, setAmount] = useState('');
   const [memo, setMemo] = useState('');

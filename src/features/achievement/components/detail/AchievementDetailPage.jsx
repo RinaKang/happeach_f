@@ -25,7 +25,7 @@ function AchievementDetailPage({ accountId, rank }) {
     goalAmount,
     records = [],
   } = detail;
-  const displayName = name || '행복통장';
+  const displayName = name || '행복 통장';
 
   return (
     <div className="achievementDetailPage">
@@ -33,7 +33,7 @@ function AchievementDetailPage({ accountId, rank }) {
         <div className="achievementDetailPage__headerLeft">
           <p className="achievementDetailPage__title">{displayName}</p>
           <p className="achievementDetailPage__date">
-            {startDate}{endDate && endDate !== startDate ? ` ~ ${endDate}` : ''}
+            {startDate}{endDate && endDate !== startDate ? ` - ${endDate}` : ''}
           </p>
         </div>
         <p className="achievementDetailPage__total">{balance.toLocaleString('ko-KR')}원</p>

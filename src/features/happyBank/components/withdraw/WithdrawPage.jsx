@@ -143,7 +143,7 @@ function WithdrawPage({ onBack, bankInfo, record, onDelete }) {
         </div>
         <div className="withdrawPage__infoRow">
           {/* 닉네임 생성되면 입금자명 닉네임이나 이름으로 변경 */}
-          <span className="withdrawPage__infoLabel">입금자명</span>
+          <span className="withdrawPage__infoLabel">이름</span>
           <span className="withdrawPage__infoValue">
             {bankInfo?.userName ?? bankInfo?.name ?? '나'}
           </span>
@@ -160,7 +160,7 @@ function WithdrawPage({ onBack, bankInfo, record, onDelete }) {
 
       <div className="withdrawPage__infoRows">
         <div className="withdrawPage__infoRow">
-          <span className="withdrawPage__infoLabel">입금 내용</span>
+          <span className="withdrawPage__infoLabel">내용</span>
           <span className="withdrawPage__infoValue">{record.memo}</span>
         </div>
       </div>

@@ -243,7 +243,7 @@ function HappyBankPage() {
       <div className="happyBankPageOverlay">
         <DepositPage
           accountId={depId}
-          bankName={depBank?.displayName ?? depBank?.name ?? '행복통장'}
+          bankName={depBank?.displayName ?? depBank?.name ?? '행복 통장'}
           initialType={initialType}
           onComplete={() => navigate(`/happybank/${depId}`)}
           onBack={() => navigate(-1)}
@@ -260,7 +260,7 @@ function HappyBankPage() {
     return (
       <BankWithdrawView
         accountId={wdId}
-        bankName={wdBank?.displayName ?? wdBank?.name ?? '행복통장'}
+        bankName={wdBank?.displayName ?? wdBank?.name ?? '행복 통장'}
       />
     );
   }

@@ -6,14 +6,14 @@ import '../styles/AchievementListItem.css';
 // endDate: PERIOD 목표 종료일 (AMOUNT면 null)
 function AchievementListItem({ achievement, onClick }) {
   const { name, rank, startDate, endDate, balance } = achievement;
-  const displayName = name || '행복통장';
+  const displayName = name || '행복 통장';
 
   return (
     <button className="achievementListItem" type="button" onClick={onClick}>
       <div className="achievementListItem__left">
         <p className="achievementListItem__title">{displayName}</p>
         <p className="achievementListItem__date">
-          {startDate}{endDate && endDate !== startDate ? ` ~ ${endDate}` : ''}
+          {startDate}{endDate && endDate !== startDate ? ` - ${endDate}` : ''}
         </p>
       </div>
       <p className="achievementListItem__amount">

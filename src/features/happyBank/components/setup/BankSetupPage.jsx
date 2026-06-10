@@ -17,7 +17,7 @@ import GoalTabSwitch from './GoalTabSwitch';
 import SetupCompleteModal from './SetupCompleteModal';
 import '../../styles/setup/BankSetupPage.css';
 
-const SPECIAL_CHAR_REGEX = /[^가-힣a-zA-Z0-9\s]/;
+const SPECIAL_CHAR_REGEX = /[^가-힣ㄱ-ㅣa-zA-Z0-9\s]/;
 
 function getInitialFormState(initialData) {
   if (!initialData) {
