@@ -4,6 +4,7 @@ import ChevronRight from '../../../assets/icons/common/ChevronRight';
 import { useNavigate } from 'react-router-dom';
 import { getUserIdFromToken } from '../../calendar/hook/auth.js';
 import { formatDate } from '../../calendar/hook/dateUtil.js';
+import '../styles/ExpenseEmotion.css';
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
