@@ -256,8 +256,8 @@
     /* 1. 남은 하단 공간을 흰색으로 전부 채웁니다 */
     flex-grow: 1; 
     
-    /* 2. 버튼이 올라올 수 있도록 하단 패딩 확보 (버튼이 콘텐츠를 가리지 않게) */
-    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
 }
 
 .alert-CTA-banner {
@@ -300,6 +300,7 @@
     align-items: flex-start;
     gap: 24px;
     align-self: stretch;
+    flex-grow: 1;
 }
 
 .section-header {
