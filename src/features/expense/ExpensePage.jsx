@@ -333,7 +333,7 @@ const ExpensePage = () => {
 
           {/* 이체일시(selectedDate) */}
           <div className='payment-at-content'>
-            <div className='label'>이체일시</div>
+            <div className='label'>{formData.type === 'INCOME' ? '수입 일시' : '지출 일시'}</div>
             <div className='input-content'>
               <DatePicker
                 formData={formData}
@@ -344,13 +344,14 @@ const ExpensePage = () => {
           </div>
 
           {/* ExpenseMemo : 메모(memo) */}
+          <ExpenseMemo
+            formData={formData}
+            setFormData={setFormData}
+            handleChange={handleChange}
+          />
+          
           {/* ExpenseEmotion : 감정(selectedEmo), 소비만족도(selectedSat) */}
-          {formData.type === "INCOME" ?
-            <ExpenseMemo
-              formData={formData}
-              setFormData={setFormData}
-              handleChange={handleChange}
-            /> :
+          {formData.type === "EXPENSE" &&
             <ExpenseEmotion
               formData={formData}
               setFormData={setFormData}

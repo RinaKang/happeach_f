@@ -45,7 +45,7 @@ const ExpenseAmount = ({
   return (
     <div className='contents2'>
       <div className='type-content'>
-        <div className='label'>거래유형</div>
+        <div className='label'>유형</div>
         <div
           ref={dropdownRef}
           className="dropdown"
@@ -83,7 +83,7 @@ const ExpenseAmount = ({
         <label for='amount'>금액</label>
         <div tabindex="0" className='input-content'>
           <input
-            type='number'
+            type='text'
             id='amount'
             name='amount'
             placeholder='0원'
