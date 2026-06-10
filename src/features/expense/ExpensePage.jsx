@@ -188,6 +188,9 @@ const ExpensePage = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
+    // 메모 100자 제한
+    if (name === 'memo' && value.length > 100) return;
+
     // 컴포넌트 전체에서 쓰는 공통 값 저장 변수
     let finalValue = value;
 
