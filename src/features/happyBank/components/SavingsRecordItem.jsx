@@ -1,7 +1,7 @@
 import '../styles/SavingsRecordItem.css';
 
 function SavingsRecordItem({ date, type, memo, hashtag, amount, onClick }) {
-  const typeLabel = type === 'happy' ? '행복저금' : '행복해지는 저금';
+  const typeLabel = type === 'happy' ? '행복 저금' : '행복해지는 저금';
 
   return (
     <button className="savingsRecordItem" onClick={onClick} type="button">

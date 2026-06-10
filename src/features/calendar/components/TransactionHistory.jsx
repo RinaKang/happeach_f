@@ -102,7 +102,7 @@ const TransactionHistory = ({
 
   const renderTransactionList = () => {
     if (dayData?.length === 0) {
-      return <div className='no-transacton'>없음</div>
+      return <div className='no-transacton'>기록이 존재하지 않아요!</div>
     }
 
     return dayData?.map((item, index) => {
@@ -127,7 +127,7 @@ const TransactionHistory = ({
             </div>}
           </div>
           <div className={`amount-row ${isIncome ? 'income' : 'expense'}`}>
-            {isIncome ? '' : '- '}{amount.toLocaleString()} 원
+            {isIncome ? '' : '- '}{amount.toLocaleString()}원
           </div>
         </li>
       )
@@ -137,7 +137,7 @@ const TransactionHistory = ({
   return (
     <div className='transaction-history'>
       <div className='section-header'>
-        총 {dayData?.length}건의 거래
+        총 {dayData?.length}건의 기록
       </div>
       <ul className='transaction-list'>
         {renderTransactionList()}

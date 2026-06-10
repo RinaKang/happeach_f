@@ -38,7 +38,7 @@ const ExpenseFixSetting = ({
   return (
     <div className='fix-setting'>
       <div className='cycle-setting'>
-        <div className='label'>반복주기</div>
+        <div className='label'>반복 주기</div>
 
         <div className='setting-bar'>
           <div

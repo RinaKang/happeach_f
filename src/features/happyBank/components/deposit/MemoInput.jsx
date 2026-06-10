@@ -38,7 +38,7 @@ function MemoInput({ value, onChange }) {
             onChange={(e) => onChange(e.target.value.slice(0, MAX_LENGTH))}
             onFocus={() => setIsFocused(true)}
             onBlur={handleBlur}
-            placeholder="메모할 내용을 적어주세요."
+            placeholder="메모할 내용을 적어주세요"
             maxLength={MAX_LENGTH}
             rows={1}
             lang="ko"

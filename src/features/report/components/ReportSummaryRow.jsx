@@ -4,7 +4,7 @@ function ReportSummaryRow({ totalExpense, emotionCount }) {
   return (
     <div className="reportSummaryRow">
       <div className="reportSummaryRow__card">
-        <p className="reportSummaryRow__label">이번달 총 지출</p>
+        <p className="reportSummaryRow__label">이번 달 총 지출</p>
         <div className="reportSummaryRow__amountRow">
           <span className="reportSummaryRow__value">{totalExpense.toLocaleString('ko-KR')}</span>
           <span className="reportSummaryRow__desc">원</span>

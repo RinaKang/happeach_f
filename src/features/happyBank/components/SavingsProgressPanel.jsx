@@ -28,7 +28,7 @@ function SavingsProgressPanel({ happySavings, becomeSavings, goalAmount, goalTyp
   return (
     <div className="savingsProgressPanel">
       <div className="savingsProgressPanel__card">
-        <p className="savingsProgressPanel__label">행복저금</p>
+        <p className="savingsProgressPanel__label">행복 저금</p>
         <p className="savingsProgressPanel__amount">{happySavings.toLocaleString('ko-KR')}원</p>
         <div className="savingsProgressPanel__barTrack">
           <div

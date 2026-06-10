@@ -22,7 +22,7 @@ function GoalAmountInput({ value, onChange }) {
 
   return (
     <div className="goalAmountInput">
-      <label className="goalAmountInput__label">목표금액</label>
+      <label className="goalAmountInput__label">목표 금액</label>
       <div className={`goalAmountInput__wrapper ${isFocused ? 'goalAmountInput__wrapper--focused' : ''}`}>
         <div className="goalAmountInput__fieldRow">
           <input

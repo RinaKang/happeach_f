@@ -50,7 +50,7 @@ function makeBarcodePattern(seed) {
 
 
 const TYPE_LABEL = {
-  happy: '행복저금',
+  happy: '행복 저금',
   become: '행복해지는 저금',
 };
 
@@ -136,9 +136,9 @@ function WithdrawPage({ onBack, bankInfo, record, onDelete }) {
 
       <div className="withdrawPage__infoRows">
         <div className="withdrawPage__infoRow">
-          <span className="withdrawPage__infoLabel">저금유형</span>
+          <span className="withdrawPage__infoLabel">저금 유형</span>
           <span className="withdrawPage__infoValue">
-            {TYPE_LABEL[record.type] ?? '행복저금'}
+            {TYPE_LABEL[record.type] ?? '행복 저금'}
           </span>
         </div>
         <div className="withdrawPage__infoRow">
@@ -149,7 +149,7 @@ function WithdrawPage({ onBack, bankInfo, record, onDelete }) {
           </span>
         </div>
         <div className="withdrawPage__infoRow">
-          <span className="withdrawPage__infoLabel">저금시간</span>
+          <span className="withdrawPage__infoLabel">저금 시간</span>
           <span className="withdrawPage__infoValue">
             {formatReceiptTime(record)}
           </span>
@@ -169,7 +169,7 @@ function WithdrawPage({ onBack, bankInfo, record, onDelete }) {
 
       <div className="withdrawPage__infoRows">
         <div className="withdrawPage__infoRow">
-          <span className="withdrawPage__infoLabel">태그작성</span>
+          <span className="withdrawPage__infoLabel">태그</span>
           <span className="withdrawPage__infoValue">
             {record.hashtag || '-'}
           </span>
