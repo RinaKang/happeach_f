@@ -117,8 +117,8 @@ const ExpenseEmotion = ({
               <div className='text2'>행복 저금으로 기분을 전환해볼까요?</div>
             </div> :
             <div className='alert-text'>
-              <div className='text1'>만족스럽지 않은 소비였나요?</div>
-              <div className='text2'>행복 저금으로 기분을 전환해볼까요?</div>
+              <div className='text1'>후회는 훌훌 털어 버리고, 나를 위해 저금해 보는 건 어때요?</div>
+              <div className='text2'>행복해지는 저금이 기다리고 있어요</div>
             </div>}
           <ChevronRight stroke="#F7645F" />
         </div>

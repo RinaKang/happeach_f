@@ -28,7 +28,7 @@ const ExpenseTitle = ({
           />}
       </div>
       <div className='title-content'>
-        <label for='title'>내역명</label>
+        <label for='title'>{formData?.type === 'INCOME' ? '수입명' : '지출명'}</label>
         <div tabindex="0" className='input-content'>
           <input
             type='text'

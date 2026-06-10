@@ -45,7 +45,7 @@ const ExpenseAmount = ({
   return (
     <div className='contents2'>
       <div className='type-content'>
-        <div className='label'>거래유형</div>
+        <div className='label'>유형</div>
         <div
           ref={dropdownRef}
           className="dropdown"
