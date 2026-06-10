@@ -251,9 +251,13 @@
 }
 
 .transaction-section {
-    flex-grow: 1;
     border-top: 1px solid var(--Gray2, #EEEEEF);
     background: #FFF;
+    /* 1. 남은 하단 공간을 흰색으로 전부 채웁니다 */
+    flex-grow: 1; 
+    
+    /* 2. 버튼이 올라올 수 있도록 하단 패딩 확보 (버튼이 콘텐츠를 가리지 않게) */
+    padding-bottom: 80px;
 }
 
 .alert-CTA-banner {
