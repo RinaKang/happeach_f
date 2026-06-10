@@ -351,7 +351,7 @@ const ExpensePage = () => {
           />
           
           {/* ExpenseEmotion : 감정(selectedEmo), 소비만족도(selectedSat) */}
-          {formData.type === "INCOME" &&
+          {formData.type === "EXPENSE" &&
             <ExpenseEmotion
               formData={formData}
               setFormData={setFormData}
