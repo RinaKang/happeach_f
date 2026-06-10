@@ -33,7 +33,7 @@ function AchievementDetailPage({ accountId, rank }) {
         <div className="achievementDetailPage__headerLeft">
           <p className="achievementDetailPage__title">{displayName}</p>
           <p className="achievementDetailPage__date">
-            {startDate}{endDate && endDate !== startDate ? ` ~ ${endDate}` : ''}
+            {startDate}{endDate && endDate !== startDate ? ` - ${endDate}` : ''}
           </p>
         </div>
         <p className="achievementDetailPage__total">{balance.toLocaleString('ko-KR')}원</p>

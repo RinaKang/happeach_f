@@ -13,7 +13,7 @@ function AchievementListItem({ achievement, onClick }) {
       <div className="achievementListItem__left">
         <p className="achievementListItem__title">{displayName}</p>
         <p className="achievementListItem__date">
-          {startDate}{endDate && endDate !== startDate ? ` ~ ${endDate}` : ''}
+          {startDate}{endDate && endDate !== startDate ? ` - ${endDate}` : ''}
         </p>
       </div>
       <p className="achievementListItem__amount">
