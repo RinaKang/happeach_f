@@ -251,6 +251,7 @@
 }
 
 .transaction-section {
+    flex-grow: 1;
     border-top: 1px solid var(--Gray2, #EEEEEF);
     background: #FFF;
 }

@@ -127,7 +127,7 @@ const TransactionHistory = ({
             </div>}
           </div>
           <div className={`amount-row ${isIncome ? 'income' : 'expense'}`}>
-            {isIncome ? '' : '- '}{amount.toLocaleString()} 원
+            {isIncome ? '' : '- '}{amount.toLocaleString()}원
           </div>
         </li>
       )
