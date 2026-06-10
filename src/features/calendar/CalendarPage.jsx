@@ -223,13 +223,13 @@ const CalendarPage = () => {
             className={`switch ${isWeekView ? 'on' : ''}`}
             onClick={showSelectedWeek}
           >
-            <ListIcon />
+            <ListIcon stroke={`${isWeekView ? '#FFB0AD' : 'white'}`}/>
           </div>
           <div
             className={`switch ${!isWeekView ? 'on' : ''}`}
             onClick={showFullMonth}
           >
-            <CalendarIcon />
+            <CalendarIcon stroke={`${!isWeekView ? '#FFB0AD' : 'white'}`} />
           </div>
         </div>
       </div>

@@ -7,18 +7,11 @@
     min-height: 651px;
     flex-shrink: 0;
     align-self: stretch;
+    background-image: url('../../../assets/images/BG_2x.png');
 }
 
-.calendar.week {
-    background: #ffffff;
-}
-
-.calendar.month {
-    background: var(--Gray-5, #F4F5F6);
-}
-
-.calendar > *:last-child {
-  margin-top: auto;       
+.calendar>*:last-child {
+    margin-top: auto;
 }
 
 .calendar-header {
@@ -28,7 +21,6 @@
     padding: 16px 24px 0;
     justify-content: space-between;
     align-items: center;
-    background: var(--Gray-5, #F4F5F6);
 }
 
 .view-toggle {
@@ -38,7 +30,7 @@
     align-items: center;
     gap: 7px;
     border-radius: 4px;
-    background: var(--Gray-10, #E6E8EA);
+    background: var(--Primary-20, #FFCAC8);
 }
 
 .switch {
@@ -68,7 +60,6 @@
     align-items: flex-start;
     gap: 12px;
     padding: 14px 16px;
-    background: var(--Gray-5, #F4F5F6);
 }
 
 .text-card {
@@ -130,7 +121,6 @@
 
 .calendar-body {
     padding: 14px 16px 12px 16px;
-    background: var(--Gray-5, #F4F5F6);
 }
 
 .calendar-body .weekdays {
@@ -261,6 +251,7 @@
 }
 
 .transaction-section {
+    flex-grow: 1;
     border-top: 1px solid var(--Gray2, #EEEEEF);
     background: #FFF;
 }

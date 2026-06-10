@@ -167,7 +167,7 @@ const ExpensePage = () => {
   }, [editData, isEditMode, isReEva]);
 
   useEffect(() => {
-    if(formData.amount == '' || formData.category == 'NONE') {
+    if (formData.amount == '' || formData.category == 'NONE') {
       setDisable(true);
     } else {
       setDisable(false);
@@ -188,10 +188,33 @@ const ExpensePage = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
+    // 컴포넌트 전체에서 쓰는 공통 값 저장 변수
+    let finalValue = value;
+
+    // input의 name이 'amount'일 때만 콤마 포맷팅 적용
+    if (name === 'amount') {
+      finalValue = formatNumberWithCommas(value);
+    }
+
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: finalValue
     }));
+  };
+
+  // 숫자에만 3자리마다 콤마를 찍어주는 함수
+  const formatNumberWithCommas = (value) => {
+    if (!value) return '';
+    // 1. 숫자만 남기고 모두 제거
+    const rawValue = value.toString().replace(/[^0-9]/g, '');
+    // 2. 3자리마다 콤마 추가
+    return Number(rawValue).toLocaleString();
+  };
+
+  // (옵션) 나중에 서버 전송이나 계산을 위해 콤마를 제거하고 숫자로 만드는 함수
+  const unformatCommas = (value) => {
+    if (!value) return 0;
+    return Number(value.toString().replace(/,/g, ''));
   };
 
 
@@ -213,12 +236,14 @@ const ExpensePage = () => {
     // 1. formatDate로 구한 날짜 문자열("2026-04-26") 뒤에 "T00:00:00"을 바로 붙여줍니다.
     const formattedDate = formatDate(formData.paymentAt); // "2026-04-26"
     const localDateTimeString = formattedDate ? `${formattedDate}T00:00:00` : null; // "2026-04-26T00:00:00"
+    const numberAmount = unformatCommas(formData.amount);
 
     // 2. 서버에 보낼 데이터를 그 자리에서 완벽하게 합치기 (날짜 보정 + userId 주입)
     const submitData = {
       ...formData,
       userId: userId,                // 작성 시 필요한 userId 확실하게 주입
-      paymentAt: localDateTimeString // 시차 오류 없는 백엔드 맞춤형 날짜 주입
+      paymentAt: localDateTimeString, // 시차 오류 없는 백엔드 맞춤형 날짜 주입
+      amount: numberAmount,
     };
 
     // 3. 컴포넌트 state도 동기화 (필요시)
