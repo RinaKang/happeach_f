@@ -6,7 +6,7 @@ import '../styles/AchievementListItem.css';
 // endDate: PERIOD 목표 종료일 (AMOUNT면 null)
 function AchievementListItem({ achievement, onClick }) {
   const { name, rank, startDate, endDate, balance } = achievement;
-  const displayName = name || '행복통장';
+  const displayName = name || '행복 통장';
 
   return (
     <button className="achievementListItem" type="button" onClick={onClick}>

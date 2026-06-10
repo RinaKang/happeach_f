@@ -25,7 +25,7 @@ function AchievementDetailPage({ accountId, rank }) {
     goalAmount,
     records = [],
   } = detail;
-  const displayName = name || '행복통장';
+  const displayName = name || '행복 통장';
 
   return (
     <div className="achievementDetailPage">

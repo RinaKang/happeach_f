@@ -1,4 +1,4 @@
-export const DEFAULT_BANK_NAME = '행복통장';
+export const DEFAULT_BANK_NAME = '행복 통장';
 export const MAX_NAME_LENGTH = 20;
 
 export const GOAL_AMOUNT_MIN = 1;
