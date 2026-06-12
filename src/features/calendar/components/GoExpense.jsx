@@ -6,7 +6,9 @@ import SymbolExpense from '../../../assets/icons/calendar/SymbolExpense';
 import SymbolPlus from '../../../assets/icons/calendar/SymbolPlus';
 
 
-const GoExpense = () => {
+const GoExpense = ({
+  selectedDate,
+}) => {
   const [isBtnClick, setIsBtnClick] = useState(false);
   const btnRef1 = useRef(null);
   const btnRef2 = useRef(null);
@@ -20,13 +22,13 @@ const GoExpense = () => {
 
   const handleIncomeClick = () => {
     navigate('/expense', {
-      state: { type: "INCOME" }
+      state: { type: "INCOME", date: selectedDate }
     });
   };
 
   const handleExpenseClick = () => {
     navigate('/expense', {
-      state: { type: "EXPENSE" }
+      state: { type: "EXPENSE", date: selectedDate }
     });
   };
 
