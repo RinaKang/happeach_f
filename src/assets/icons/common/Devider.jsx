@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Devider = ({ width = 100, fill = "#F4F5F6" }) => {
+const Devider = ({ width = 100, height = 1, fill = "#F4F5F6" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={width}
-      height="1"
+      height={height}
       viewBox={`0 0 ${width} 1`}
       fill="none"
     >

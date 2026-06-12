@@ -1,13 +1,15 @@
-.happyBankPage__back {
+.happyBankPage__header {
   display: flex;
   align-items: center;
-  gap: 4px;
-  background: transparent;
+  margin-bottom: 20px; /* gap: 12px + 20px = 헤더-요약카드 간격 32px */
+}
+
+.happyBankPage__backBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: none;
-  color: var(--Gray-60, #6D7882);
-  font-family: Pretendard;
-  font-size: 14px;
-  font-weight: 500;
+  background: transparent;
   cursor: pointer;
   padding: 0;
 }
@@ -48,4 +50,11 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+}
+
+.happyBankPage--detail {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  overflow-y: auto;
 }
