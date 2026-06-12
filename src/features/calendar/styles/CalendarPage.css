@@ -70,10 +70,10 @@
     border-radius: 12px;
     background: var(--Gray-0, #FFF);
 
-    color: var(--Gray-60, #6D7882);
+    color: var(--Gray-95, #131416);
 
     /* Body Medium/xsmall */
-    font-family: Pretendard;
+    font-family: "Noto Sans KR";
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -139,13 +139,12 @@
 
     color: var(--Gray-60, #6D7882);
     text-align: center;
-    font-feature-settings: 'liga' off, 'clig' off;
-    font-family: "SF Pro";
-    font-size: 13px;
+
+    font-family: "Noto Sans KR";
+    font-size: 14px;
     font-style: normal;
-    font-weight: 590;
-    line-height: 18px;
-    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 130%;
 }
 
 .calendar-grid {
@@ -372,6 +371,7 @@
 }
 
 .no-transaction {
+    width: 100%;
     color: var(--Gray-60, #6D7882);
 
     /* Body Regular/small */
