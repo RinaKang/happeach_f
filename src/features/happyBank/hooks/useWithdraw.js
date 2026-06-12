@@ -64,12 +64,7 @@ const useWithdraw = (accountId) => {
     fetchRandom();
   }, [fetchRandom]);
 
-  // DELETE /transactions/{id} - 행복저금 기록 삭제
-  const deleteRecord = async (recordId) => {
-    await axios.delete(`${BASE_URL}/transactions/${recordId}`, { headers: getHeader() });
-  };
-
-  return { record, isLoading, error, isEmpty, deleteRecord };
+  return { record, isLoading, error, isEmpty };
 };
 
 export default useWithdraw;

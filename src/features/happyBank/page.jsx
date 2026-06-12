@@ -13,6 +13,7 @@ import SavingsRecordList from './components/SavingsRecordList';
 import GoalAchievedModal from './components/detail/GoalAchievedModal';
 import SavingsRecordModal from './components/detail/SavingsRecordModal';
 import Devider from '../../assets/icons/common/Devider';
+import ChevronLeft from '../../assets/icons/common/ChevronLeft';
 import useHappyBank from './hooks/useHappyBank';
 import useBankDetail from './hooks/useBankDetail';
 import useWithdraw from './hooks/useWithdraw';
@@ -52,8 +53,8 @@ function BankDetailView({ accountId, bankSummary, onComplete }) {
     if (isGoalReached) setShowGoalModal(true);
   }, [isGoalReached]);
 
-  if (isLoading) return <div className="happyBankPage" />;
-  if (error || !bank) return <div className="happyBankPage" />;
+  if (isLoading) return <div className="happyBankPage happyBankPage--detail" />;
+  if (error || !bank) return <div className="happyBankPage happyBankPage--detail" />;
 
   const handleWithdraw = () => {
     const hasHappyRecords = records.some((r) => r.type === 'happy');
@@ -62,7 +63,17 @@ function BankDetailView({ accountId, bankSummary, onComplete }) {
   };
 
   return (
-    <div className="happyBankPage">
+    <div className="happyBankPage happyBankPage--detail">
+      <div className="happyBankPage__header">
+        <button
+          className="happyBankPage__backBtn"
+          onClick={() => navigate('/happybank')}
+          type="button"
+          aria-label="뒤로가기"
+        >
+          <ChevronLeft stroke="#B1B8BE" />
+        </button>
+      </div>
       <BankSummaryCard
         bankInfo={{ ...bank, currentAmount: bank.balance }}
         onDeposit={() => navigate(`/happybank/${accountId}/deposit`)}
@@ -118,7 +129,7 @@ function BankDetailView({ accountId, bankSummary, onComplete }) {
 function BankWithdrawView({ accountId, bankName, nickName }) {
   const navigate = useNavigate();
   const location = useLocation();
-  const { record, isLoading, isEmpty, deleteRecord } = useWithdraw(accountId);
+  const { record, isLoading, isEmpty } = useWithdraw(accountId);
   const fromList = location.state?.fromList ?? false;
   const backPath = fromList ? '/happybank' : `/happybank/${accountId}`;
 
@@ -144,15 +155,6 @@ function BankWithdrawView({ accountId, bankName, nickName }) {
         bankInfo={{ name: bankName, userName: nickName ?? record.nickname }}
         record={record}
         onBack={() => navigate(`/happybank/${accountId}`)}
-        onDelete={async (recordId) => {
-          try {
-            await deleteRecord(recordId);
-            navigate(`/happybank/${accountId}`);
-          } catch (err) {
-            console.error('거래 기록 삭제 실패', err);
-            showUnimplementedAlert(err.message);
-          }
-        }}
       />
     </div>
   );
@@ -204,26 +206,26 @@ function HappyBankPage() {
           onCompleteAndDeposit={
             matchSetup
               ? async (bankData) => {
-                  try {
-                    const newId = await createBank(bankData);
-                    navigate(`/happybank/${newId}/deposit`, { state: { initialType: 'happy' } });
-                  } catch (err) {
-                    console.error('통장 생성 후 저금 이동 실패', err);
-                  }
+                try {
+                  const newId = await createBank(bankData);
+                  navigate(`/happybank/${newId}/deposit`, { state: { initialType: 'happy' } });
+                } catch (err) {
+                  console.error('통장 생성 후 저금 이동 실패', err);
                 }
+              }
               : undefined
           }
           onDelete={
             matchEdit
               ? async () => {
-                  try {
-                    await deleteBank(editId);
-                    navigate('/happybank');
-                  } catch (err) {
-                    console.error('통장 삭제 실패', err);
-                    showUnimplementedAlert(err.message);
-                  }
+                try {
+                  await deleteBank(editId);
+                  navigate('/happybank');
+                } catch (err) {
+                  console.error('통장 삭제 실패', err);
+                  showUnimplementedAlert(err.message);
                 }
+              }
               : undefined
           }
           onBack={() => navigate(matchEdit ? `/happybank/${editId}` : '/happybank')}
@@ -294,7 +296,7 @@ function HappyBankPage() {
           onEdit={() => navigate(`/happybank/${bank.id}/edit`, { state: { bank } })}
         />
       ))}
-      <Devider width={343} fill="#FFE1E0" />
+      <Devider width={343} height={2} fill="#FFCAC8" />
       <AddBankButton onClick={() => navigate('/happybank/setup')} />
     </div>
   );
