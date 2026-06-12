@@ -13,7 +13,7 @@ import SavingsRecordList from './components/SavingsRecordList';
 import GoalAchievedModal from './components/detail/GoalAchievedModal';
 import SavingsRecordModal from './components/detail/SavingsRecordModal';
 import Devider from '../../assets/icons/common/Devider';
-import ChevronLeft from '../../assets/icons/common/ChevronLeftH';
+import ChevronLeft from '../../assets/icons/common/ChevronLeft';
 import useHappyBank from './hooks/useHappyBank';
 import useBankDetail from './hooks/useBankDetail';
 import useWithdraw from './hooks/useWithdraw';
