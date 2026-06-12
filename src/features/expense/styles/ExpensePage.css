@@ -148,9 +148,14 @@ input:focus+.clear {
     visibility: visible;
 }
 
-.input-content .react-datepicker-wrapper,
-.input-content .react-datepicker__input-container {
+.payment-at-content .input-content {
+    display: block;
+}
+
+.payment-at-content .react-datepicker-wrapper,
+.payment-at-content .react-datepicker__input-container {
     width: 100%;
+    display: flex;
 }
 
 .payment-at-content {
