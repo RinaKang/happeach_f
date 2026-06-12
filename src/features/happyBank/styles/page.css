@@ -1,7 +1,9 @@
 .happyBankPage__header {
   display: flex;
   align-items: center;
-  margin-bottom: 20px; /* gap: 12px + 20px = 헤더-요약카드 간격 32px */
+  margin: -18px -16px 20px; /* gap: 12px + 20px = 헤더-요약카드 간격 32px */
+  padding: 12px 16px;
+  background: #fff;
 }
 
 .happyBankPage__backBtn {
@@ -57,4 +59,6 @@
   inset: 0;
   z-index: 1000;
   overflow-y: auto;
+  max-width: 390px;
+  margin: 0 auto;
 }
