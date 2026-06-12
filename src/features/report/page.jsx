@@ -32,7 +32,7 @@ function ReportPage() {
         <MonthSelector selectedDate={selectedDate} onChange={setSelectedDate} availableMonths={availableMonths} />
       </div>
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '12px', paddingTop: '80px' }}>
-        <p style={{ margin: 0, color: '#FFB0AD', fontFamily: 'Pretendard', fontSize: '14px', fontStyle: 'normal', fontWeight: 500, lineHeight: '130%' }}>이 달의 기록이 없습니다</p>
+        <p style={{ margin: 0, color: '#FFB0AD', fontFamily: 'Pretendard', fontSize: '14px', fontStyle: 'normal', fontWeight: 500, lineHeight: '130%' }}>이달의 기록이 없습니다</p>
       </div>
     </div>
   );

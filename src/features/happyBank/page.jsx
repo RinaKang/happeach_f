@@ -118,7 +118,7 @@ function BankDetailView({ accountId, bankSummary, onComplete }) {
 function BankWithdrawView({ accountId, bankName, nickName }) {
   const navigate = useNavigate();
   const location = useLocation();
-  const { record, isLoading, isEmpty, deleteRecord } = useWithdraw(accountId);
+  const { record, isLoading, isEmpty } = useWithdraw(accountId);
   const fromList = location.state?.fromList ?? false;
   const backPath = fromList ? '/happybank' : `/happybank/${accountId}`;
 
@@ -144,15 +144,6 @@ function BankWithdrawView({ accountId, bankName, nickName }) {
         bankInfo={{ name: bankName, userName: nickName ?? record.nickname }}
         record={record}
         onBack={() => navigate(`/happybank/${accountId}`)}
-        onDelete={async (recordId) => {
-          try {
-            await deleteRecord(recordId);
-            navigate(`/happybank/${accountId}`);
-          } catch (err) {
-            console.error('거래 기록 삭제 실패', err);
-            showUnimplementedAlert(err.message);
-          }
-        }}
       />
     </div>
   );
