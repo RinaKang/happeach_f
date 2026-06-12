@@ -2,6 +2,7 @@ import React, { useState, Fragment, useRef } from 'react'
 import DisClosure from '../../../assets/icons/common/DisClosure';
 import ChevronUp from '../../../assets/icons/common/ChevronUp';
 import { useOutsideClick } from '../hook/useOutsideClick';
+import '../styles/ExpenseCategory.css';
 
 const ExpenseCategory = ({
   formData,

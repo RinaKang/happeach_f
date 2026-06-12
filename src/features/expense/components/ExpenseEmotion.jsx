@@ -4,6 +4,7 @@ import ChevronRight from '../../../assets/icons/common/ChevronRight';
 import { useNavigate } from 'react-router-dom';
 import { getUserIdFromToken } from '../../calendar/hook/auth.js';
 import { formatDate } from '../../calendar/hook/dateUtil.js';
+import '../styles/ExpenseEmotion.css';
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
@@ -17,6 +18,11 @@ const ExpenseEmotion = ({
   id,
 }) => {
   const navigate = useNavigate();
+
+  const unformatCommas = (value) => {
+    if (!value) return 0;
+    return Number(value.toString().replace(/,/g, ''));
+  };
 
   const handleEmotion = (val) => {
     // 이미 선택된 걸 다시 누르면 null로 초기화(해제), 아니면 새로운 값 세팅
@@ -40,12 +46,14 @@ const ExpenseEmotion = ({
     // 1. formatDate로 구한 날짜 문자열("2026-04-26") 뒤에 "T00:00:00"을 바로 붙여줍니다.
     const formattedDate = formatDate(formData.paymentAt); // "2026-04-26"
     const localDateTimeString = formattedDate ? `${formattedDate}T00:00:00` : null; // "2026-04-26T00:00:00"
+    const numberAmount = unformatCommas(formData.amount);
 
     // 2. 서버에 보낼 데이터를 그 자리에서 완벽하게 합치기 (날짜 보정 + userId 주입)
     const submitData = {
       ...formData,
       userId: userId,                // 작성 시 필요한 userId 확실하게 주입
-      paymentAt: localDateTimeString // 시차 오류 없는 백엔드 맞춤형 날짜 주입
+      paymentAt: localDateTimeString, // 시차 오류 없는 백엔드 맞춤형 날짜 주입
+      amount: numberAmount,
     };
 
     // 3. 컴포넌트 state도 동기화 (필요시)
@@ -117,7 +125,8 @@ const ExpenseEmotion = ({
               <div className='text2'>행복 저금으로 기분을 전환해볼까요?</div>
             </div> :
             <div className='alert-text'>
-              <div className='text1'>후회는 훌훌 털어 버리고, 나를 위해 저금해 보는 건 어때요?</div>
+              <div className='text1'>후회는 훌훌 털어 버리고,</div>
+              <dic className='text1'>나를 위해 저금해 보는 건 어때요?</dic>
               <div className='text2'>행복해지는 저금이 기다리고 있어요</div>
             </div>}
           <ChevronRight stroke="#F7645F" />

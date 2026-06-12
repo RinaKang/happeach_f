@@ -3,6 +3,7 @@ import DisClosure from '../../../assets/icons/common/DisClosure';
 import Devider from '../../../assets/icons/common/Devider';
 import Delite from '../../../assets/icons/common/Delite';
 import { useOutsideClick } from '../hook/useOutsideClick';
+import '../styles/ExpenseAmount.css'
 
 const ExpenseAmount = ({
   formData,

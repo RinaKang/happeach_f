@@ -1,5 +1,6 @@
 import React from 'react'
 import Delite from '../../../assets/icons/common/Delite'
+import '../styles/ExpenseTitle.css'
 
 const ExpenseTitle = ({
   formData,
