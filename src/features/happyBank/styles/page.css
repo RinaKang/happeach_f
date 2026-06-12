@@ -61,27 +61,4 @@
   overflow-y: auto;
   max-width: 390px;
   margin: 0 auto;
-  background-image: none;
-}
-
-.happyBankPage--detail::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  max-width: 390px;
-  margin: 0 auto;
-  background-color: #f4f5f6;
-  background-image: url('../../../assets/images/BG_375x812.png');
-  background-image: -webkit-image-set(
-    url('../../../assets/images/BG_375x812.png') 1x,
-    url('../../../assets/images/BG_2x.png') 2x
-  );
-  background-image: image-set(
-    url('../../../assets/images/BG_375x812.png') 1x,
-    url('../../../assets/images/BG_2x.png') 2x
-  );
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
 }
