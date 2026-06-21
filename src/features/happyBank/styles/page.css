@@ -44,12 +44,12 @@
 }
 
 .happyBankPageOverlay {
-  position: fixed;
-  inset: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  width: 100%;
   background: #fff;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
 }
