@@ -1,16 +1,104 @@
-# React + Vite
+# 해피치 (Happeach)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+감정과 소비를 함께 기록하고, 저축 목표까지 연결해 관리할 수 있는 감정 기반 가계부 서비스입니다.  
+사용자는 소비 내역을 기록할 때 감정과 만족도를 함께 남길 수 있고, 월간 리포트와 행복 통장 기능을 통해 자신의 소비 패턴을 더 쉽게 돌아볼 수 있습니다.
 
-Currently, two official plugins are available:
+## 배포 링크
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 서비스: https://happeach.site
 
-## React Compiler
+## 프론트엔드 팀원
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| 이름 | 담당 기능 |
+|---|---|
+| 정유진 | 감정 가계부, 카카오 로그인 연결 |
+| 강리나 | 행복 통장, 월간 리포트, 행복 기록, 설정, 배포 |
 
-## Expanding the ESLint configuration
+## 프로젝트 소개
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+해피치는 단순히 수입과 지출을 기록하는 가계부를 넘어,  
+"내가 어떤 감정일 때 어떤 소비를 했는지"를 함께 돌아볼 수 있도록 만든 서비스입니다.
+
+소비 기록에 감정과 만족도를 함께 저장하고, 이를 월간 리포트로 시각화해 사용자가 자신의 소비 습관을 이해하도록 돕습니다.  
+또한 목표 기반 저축 기능인 `행복 통장`을 통해 소비 관리에서 한 걸음 더 나아가 저축 경험까지 연결합니다.
+
+## 주요 기능
+
+### 1. 카카오 로그인
+- 카카오 OAuth 기반 로그인 지원
+- 로그인 후 토큰을 저장해 보호된 페이지 접근 제어
+
+### 2. 캘린더 기반 가계부
+- 월간 / 주간 형태로 소비 내역 조회
+- 날짜별 수입, 지출, 거래 내역 확인
+- 재평가가 필요한 소비 내역 알림 제공
+
+### 3. 수입/지출 기록
+- 수입과 지출 직접 등록 및 수정, 삭제
+- 카테고리 분류 지원
+- 메모 작성 가능
+- 반복 지출 설정 가능
+
+### 4. 감정 및 만족도 기록
+- 지출 기록 시 감정 선택 가능
+- 소비 만족도를 함께 기록해 단순 금액 기록을 넘어선 소비 회고 지원
+- 일부 소비는 이후 재평가 기능으로 다시 돌아볼 수 있음
+
+### 5. 월간 소비 리포트
+- 월별 총 지출 및 감정 기록 수 요약
+- 감정별 소비 비율 시각화
+- 감정과 만족도의 상관관계 차트 제공
+- 소비 흐름에 따라 행복 통장 액션을 유도하는 배너 제공
+
+### 6. 행복 통장
+- 목표 금액 또는 목표 기간 기반 저축 통장 생성
+- 행복저금 / 행복해지는저금 유형별 입금 관리
+- 진행률 확인 가능
+- 목표 달성 시 완료 처리 및 행복 인출 지원
+
+### 7. 행복 기록
+- 달성 완료된 행복 통장 회차별 히스토리 조회
+- 상세 페이지를 통한 저금 내역 확인
+
+### 8. 설정
+- 닉네임 변경
+- 로그아웃
+- 회원 탈퇴
+
+## 기술 스택
+
+### Frontend
+- React 19
+- Vite
+- React Router DOM
+- CSS
+
+### Library
+- Axios
+- date-fns
+- jwt-decode
+- react-datepicker
+- Recharts
+- html-to-image
+
+### Deployment
+- Vercel
+
+## 폴더 구조
+
+```bash
+src/
+├─ assets/                 # 아이콘, 이미지
+├─ features/
+│  ├─ achievement/         # 행복 기록
+│  ├─ calendar/            # 감정 가계부
+│  ├─ expense/             # 가계부 수입/지출 작성 및 수정
+│  ├─ happyBank/           # 행복 통장
+│  ├─ login/               # 카카오 로그인
+│  ├─ report/              # 월별 요약 리포트
+│  └─ setting/             # 설정
+├─ shared/
+│  ├─ components/          # 공통 컴포넌트
+│  └─ styles/              # 공통 스타일
+├─ App.jsx                 # 라우팅 및 레이아웃
+└─ main.jsx                # 앱 진입점
