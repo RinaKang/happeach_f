@@ -148,6 +148,16 @@ input:focus+.clear {
     visibility: visible;
 }
 
+.payment-at-content .input-content {
+    display: block;
+}
+
+.payment-at-content .react-datepicker-wrapper,
+.payment-at-content .react-datepicker__input-container {
+    width: 100%;
+    display: flex;
+}
+
 .payment-at-content {
     box-sizing: border-box;
     display: flex;

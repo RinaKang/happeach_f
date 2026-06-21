@@ -59,7 +59,7 @@ const TransactionHistory = ({
     "ALLOWANCE": { label: '용돈', icon: <Allowance width={24} height={24} />, color: { background: 'var(--Category-Green-2, #7EC88E)' } },
     "BONUS": { label: '상여금', icon: <Bonus width={24} height={24} />, color: { background: 'var(--Category-Purple-3, #D6B7FF)' } },
     "FINANCIAL": { label: '금융수입', icon: <Investment width={24} height={24} />, color: { background: 'var(--Category-Deep-Blue-2, #9FBFC9)' } },
-    "INCOME_ETC": { label: '기타', icon: <SystemMore width={24} height={24} />, color: { background: 'var(--Category-Light-pink, rgba(255, 176, 173, 0.20))'} },
+    "INCOME_ETC": { label: '기타', icon: <SystemMore width={24} height={24} />, color: { background: 'var(--Category-Light-pink, rgba(255, 176, 173, 0.20))' } },
     "FOOD": { label: '식비', icon: <Food width={24} height={24} />, color: { background: 'var(--Category-Blue, #9ED2FA)' } },
     "HOUSING": { label: '주거/통신', icon: <Housing width={24} height={24} />, color: { background: 'var(--Category-Purple, #E2CCFF)' } },
     "TRANSPORT": { label: '교통/차량', icon: <Transport width={24} height={24} />, color: { background: 'var(--Category-Mint, #B5E2DF)' } },
@@ -102,7 +102,7 @@ const TransactionHistory = ({
 
   const renderTransactionList = () => {
     if (dayData?.length === 0) {
-      return <div className='no-transacton'>기록이 존재하지 않아요!</div>
+      return <div className='no-transaction'>기록이 존재하지 않아요!</div>
     }
 
     return dayData?.map((item, index) => {
@@ -118,13 +118,13 @@ const TransactionHistory = ({
             {category.icon}
           </div>
           <div className='detail'>
-            <div className='title-content'>
-              <div className='title'>{item.title}</div>
+            <div className='title'>{item.title}</div>
+            <div className='cat-emo-content'>
               <div className='category-text'>{category.label}</div>
+              {emo && <div className='emotion-tag'>
+                {emo.icon}{emo.label}
+              </div>}
             </div>
-            {emo && <div className='emotion-tag'>
-              {emo.icon}{emo.label}
-            </div>}
             <div className='memo-text'>{item.memo}</div>
           </div>
           <div className={`amount-row ${isIncome ? 'income' : 'expense'}`}>

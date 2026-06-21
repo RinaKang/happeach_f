@@ -56,6 +56,7 @@ const ExpensePage = () => {
   const editData = location.state?.data;
   const isEditMode = location.state?.mode === 'edit';
   const isReEva = location.state?.mode === 'reevaluated';
+  const selectedDate = location.state?.date;
   const [formData, setFormData] = useState({
     title: '',
     type: "INCOME",
@@ -173,6 +174,15 @@ const ExpensePage = () => {
       setDisable(false);
     }
   }, [formData.category, formData.amount]);
+
+  useEffect(() => {
+    if (selectedDate) {
+      setFormData((prev) => ({
+        ...prev,
+        paymentAt: new Date(selectedDate),
+      }));
+    }
+  }, [selectedDate]);
 
   // 카테고리와 내역명 옆 아이콘 동기화
   const targetCategory = useMemo(() => {
@@ -352,7 +362,7 @@ const ExpensePage = () => {
             setFormData={setFormData}
             handleChange={handleChange}
           />
-          
+
           {/* ExpenseEmotion : 감정(selectedEmo), 소비만족도(selectedSat) */}
           {formData.type === "EXPENSE" &&
             <ExpenseEmotion
